@@ -4,6 +4,7 @@ import {ArticleService} from "./article.service";
 import {MongooseModule} from "@nestjs/mongoose";
 import {Comment, CommentSchema} from "../comment/comment.schema";
 import {Article, ArticleSchema} from "./article.schema";
+import {FileService} from "../files/file.service";
 
 @Module({
  imports: [
@@ -11,7 +12,7 @@ import {Article, ArticleSchema} from "./article.schema";
   MongooseModule.forFeature([{name: Article.name, schema: ArticleSchema}])
  ],
  controllers: [ArticleControler],
- providers: [ArticleService]
+ providers: [ArticleService, FileService]
 })
 export class ArticleModule {
 }

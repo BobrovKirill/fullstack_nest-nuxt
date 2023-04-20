@@ -23,6 +23,9 @@ export class Article {
  rubric: string;
 
  @Prop()
+ picture: string;
+
+ @Prop()
  content: string;
 
  @Prop({type: [{type: Types.ObjectId, ref: 'Comment'}]})
