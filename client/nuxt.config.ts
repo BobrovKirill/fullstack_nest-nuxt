@@ -1,9 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
- imports: {
-	autoImport: false
- },
- app: {
+	app: {
 	head: {
 	 charset: 'utf-16',
 	 viewport: 'width=500, initial-scale=1',
@@ -12,8 +9,8 @@ export default defineNuxtConfig({
 	 },
 	 title: 'nuxt.config.ts title',
 	 meta: [
-		{ charset: 'utf-8' },
-		{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		{charset: 'utf-8'},
+		{name: 'viewport', content: 'width=device-width, initial-scale=1'},
 		// <meta name="description" content="My amazing site">
 		{name: 'description', content: 'My amazing site.'}
 	 ],
@@ -29,7 +26,14 @@ export default defineNuxtConfig({
 	 ],
 	 noscript: [
 		// <noscript>JavaScript is required</noscript>
-	 ]
-	}
+	 ],
+
+	},
+ },
+ modules: [
+	'@pinia/nuxt',
+ ],
+ imports: {
+	autoImport: false
  }
 })
