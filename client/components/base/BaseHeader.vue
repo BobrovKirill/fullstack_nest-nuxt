@@ -2,30 +2,28 @@
     <header class="header">
         <div class="header__wrapper"><a class="header__logo" href="/">
             <picture>
-                <source srcset="/static/images/gluhar2x.webp"/>
-                <source srcset="/static/images/gluhar4x.webp x4"/>
-                <img loading="lazy"
-                     src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                     data-src="/static/images/gluhar2x.png"
-                     alt="Логотип охотники — глухарь"/>
+                <source srcset="@/assets/images/gluhar2x.webp"/>
+                <source srcset="@/assets/images/gluhar4x.webp x4"/>
+                <img
+                        src="@/assets/images/gluhar2x.png"
+                        alt="Логотип охотники — глухарь"/>
             </picture>
-            <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                 data-src="/static/images/ohotniki-logo.svg" alt="Логотип охотники.ру"/>
+            <img
+                    src="@/assets/images/ohotniki-logo.svg" alt="Логотип охотники.ру"/>
         </a>
             <div class="header__links"><a class="header__link" href="/editions/rog/">
                 <picture class="header__link-img">
-                    <source srcset="/static/images/ru-gazeta-logo.webp"/>
-                    <img loading="lazy"
-                         src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                         data-src="/static/images/ru-gazeta-logo.png" alt="Логотип российская охотничья газета"/>
+                    <source srcset="@/assets/images/ru-gazeta-logo.webp"/>
+                    <img
+
+                            src="@/assets/images/ru-gazeta-logo.png" alt="Логотип российская охотничья газета"/>
                 </picture>
                 <span class="header__link-text">Российская охотничья газета</span>
             </a><a class="header__link" href="/editions/oir/">
                 <picture class="header__link-img">
-                    <source srcset="/static/images/ohota-ribalka-logo.webp"/>
-                    <img loading="lazy"
-                         src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                         data-src="/static/images/ohota-ribalka-logo.png" alt="Логотип Охота и рыбалка XXI век"/>
+                    <source srcset="@/assets/images/ohota-ribalka-logo.webp"/>
+                    <img
+                            src="@/assets/images/ohota-ribalka-logo.png" alt="Логотип Охота и рыбалка XXI век"/>
                 </picture>
                 <span class="header__link-text">Охота и&nbsp;рыбалка XXI&nbsp;век</span>
             </a></div>
@@ -41,11 +39,11 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
- name: "header"
+	name: "header"
 })
 </script>
 
-<style  lang="stylus">
+<style lang="stylus">
 .header
 	position sticky
 	top 0
