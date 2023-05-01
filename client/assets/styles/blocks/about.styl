@@ -1,0 +1,29 @@
+.about
+	padding 40px 18px 60px
+
+	background-color #ffffff
+	border-radius 10px
+	box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+	@media({min} sm)
+		padding 40px 58px 50px
+	@media({min} md)
+		padding 40px 58px 80px
+	@media({min} xl)
+		padding 40px 58px 120px
+	@media({min} xl)
+		padding 40px 58px 128px
+	&:empty
+		display none
+
+	& > h1,h2,h3
+		color secondaryColor
+		font-size 16px
+		line-height 28px
+		font-weight 700
+		text-transform uppercase
+
+	& > p
+		line-height 24px
+		@media({min} xxl)
+			max-width 1046px
+			margin 20px auto 0

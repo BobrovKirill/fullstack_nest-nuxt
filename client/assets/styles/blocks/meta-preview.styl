@@ -1,0 +1,37 @@
+.meta-preview
+	display flex
+	flex-direction column
+	gap 6px
+	color white
+	font-size 12px
+	font-weight 400
+	text-transform uppercase
+	&__times
+		display flex
+		justify-content center
+		span
+			display inline-flex
+			align-items center
+			gap 2px
+	&__links
+		display flex
+		align-items center
+		justify-content center
+		gap 4px
+		svg
+			fill white
+		a
+			&:last-child
+				display inline-flex
+				flex-direction row-reverse
+				align-items center
+				gap 4px
+
+	&._gallery
+		color white
+		svg
+			fill white
+	&._article
+		color #90978D
+		svg
+			fill #90978D

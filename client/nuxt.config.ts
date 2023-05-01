@@ -1,13 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import path from "path";
+import {fileURLToPath} from "url";
+
 export default defineNuxtConfig({
-	app: {
+ app: {
 	head: {
 	 charset: 'utf-16',
 	 viewport: 'width=500, initial-scale=1',
 	 htmlAttrs: {
 		lang: 'ru'
 	 },
-	 title: 'nuxt.config.ts title',
+	 title: 'title',
 	 meta: [
 		{charset: 'utf-8'},
 		{name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -22,18 +25,31 @@ export default defineNuxtConfig({
 	 ],
 	 // please note that this is an area that is likely to change
 	 style: [
-		// <style type="text/css">:root { color: red }</style>
 	 ],
 	 noscript: [
 		// <noscript>JavaScript is required</noscript>
 	 ],
-
 	},
  },
- modules: [
+ buildModules: [
+	'@nuxtjs/style-resources',
 	'@pinia/nuxt',
  ],
+ // css: [{ src: '~/assets/styles/reset.styl', lang: 'styl'}], <- Использовать для подгрузки критического css
  imports: {
-	autoImport: false
+	// autoImport: false
+ },
+ styleResources: {
+	//array of strings that are paths to the file:
+	// stylus: ['@/assets/styles/variables.styl']
+ },
+ vite: {
+	css: {
+	 preprocessorOptions: {
+		stylus: {
+		 imports: [path.resolve(__dirname, './assets/styles/styl.styl')]
+		}
+	 }
+	}
  }
 })

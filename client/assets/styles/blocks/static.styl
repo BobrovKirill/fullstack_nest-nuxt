@@ -1,0 +1,85 @@
+.static
+	grid-column 2 / 3
+
+	display flex
+	flex-direction column
+	justify-content center
+	align-items center
+
+	padding 40px 20px 100px
+
+	background-color #ffffff
+	border-radius 10px
+	box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+	@media({min} sm)
+		padding 60px 125px 176px
+	@media({min} md)
+		padding 80px 190px 140px
+	@media({min} lg)
+		padding 60px 220px 190px
+
+	&__img
+		width 188px
+		height 188px
+		margin 0 auto 20px
+		img
+			height 100%
+			width 100%
+			object-fit cover
+
+	&__title
+		display block
+		align-self flex-start
+
+		font-family 'Roboto'
+		font-weight 700
+		font-size 32px
+		line-height 40px
+		color secondaryColor
+		text-align left
+
+		margin 0 0 20px
+		padding 0 20px
+		@media({min} sm)
+			font-size 46px
+			line-height 52px
+		@media({min} md)
+			font-size 52px
+			line-height 52px
+		@media({min} xl)
+				font-size 44px
+				padding 0 90px
+		span
+			display block
+			margin 10px auto
+
+			font-family 'OpenSans'
+			font-weight 400
+			font-size 12px
+			line-height 40px
+			text-transform uppercase
+			text-align center
+			color primaryColor
+			@media({min} md)
+				font-size 16px
+				line-height 40px
+
+	&__content
+		font-weight 400
+		font-size 18px
+		line-height 36px
+		@media({min} md)
+			font-size 22px
+			line-height 40px
+
+	&_error
+		.static__title
+			text-align center
+
+			margin 0 auto 20px
+			@media({min} xl)
+				font-size 54px
+				padding 0
+		.static__content
+			margin 0 auto 40px
+			max-width 850px

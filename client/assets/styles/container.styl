@@ -1,0 +1,406 @@
+.container
+	margin 0 10px
+	max-width 100%
+
+	@media (min-width: sm)
+		margin-right 20px
+		margin-left 20px
+
+
+	@media (min-width md)
+		margin-right auto
+		margin-left auto
+		max-width 984px
+
+
+	@media (min-width: xl)
+		max-width 1129px
+
+	@media (min-width: xxl)
+		max-width 1484px
+
+.grid-container
+	background-color secondaryBg
+
+	padding 30px 0 20px
+
+	display grid
+	grid-template-columns: 10px auto 10px
+	row-gap 10px
+	@media({min}: sm)
+		padding 40px 0 20px
+
+		grid-template-columns: 0 auto 336px 0
+		row-gap 20px
+		column-gap 20px
+	@media({min}: md)
+		grid-template-columns: 20px auto 336px 20px
+	@media({min}: lg)
+		grid-template-columns: auto 628px 336px auto
+	@media({min}: xl)
+		grid-template-columns: auto 773px 336px auto
+	@media({min}: xxl)
+		grid-template-columns: auto 1128px 336px auto
+
+	&_index
+		padding 0 0 20px
+		grid-template-areas "news news news"\
+												". subscribe ."\
+												". hunt ."\
+												". good-top ."\
+												". guns ."\
+												"foto-gallery foto-gallery foto-gallery"\
+												". fishing ."\
+												". dogs ."\
+												". good-middle ."\
+												". new-comments ."\
+												"video-gallery video-gallery video-gallery"\
+												". kit ."\
+												". transport ."\
+												". good-bottom ."\
+												". most-read ."\
+												". about ."
+		@media({min}: sm)
+			grid-template-areas "news news news news"\
+													". subscribe subscribe ."\
+													". hunt hunt ."\
+													". good-top good-top ."\
+													". guns guns ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". fishing fishing ."\
+													". dogs good-middle ."\
+													". new-comments new-comments ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". kit kit ."\
+													". transport good-bottom ."\
+													". most-read most-read ."\
+													". about about ."
+		@media({min}: md)
+			grid-template-areas "news news news news"\
+													". subscribe subscribe ."\
+													". hunt good-top ."\
+													". guns guns ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". fishing good-middle ."\
+													". dogs dogs ."\
+													". new-comments new-comments ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". kit good-bottom ."\
+													". transport transport ."\
+													". most-read most-read ."\
+													". about about ."
+		@media({min}: lg)
+			grid-template-areas "news news news news"\
+													". subscribe subscribe ."\
+													". hunt good-top ."\
+													". guns guns ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". fishing good-middle ."\
+													". dogs dogs ."\
+													". new-comments new-comments ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". kit good-bottom ."\
+													". transport transport ."\
+													". most-read most-read ."\
+													". about about ."
+		@media({min}: xl)
+			grid-template-areas "news news news news"\
+													". subscribe subscribe ."\
+													". hunt good-top ."\
+													". guns guns ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". fishing good-middle ."\
+													". dogs dogs ."\
+													". new-comments new-comments ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". kit good-bottom ."\
+													". transport transport ."\
+													". most-read most-read ."\
+													". about about ."
+		@media({min}: xxl)
+			grid-template-areas "news news news news"\
+													". subscribe subscribe ."\
+													". hunt good-top ."\
+													". guns good-top ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". fishing good-middle ."\
+													". dogs good-middle ."\
+													". new-comments good-middle ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". kit good-bottom ."\
+													". transport good-bottom ."\
+													". most-read most-read ."\
+													". about about ."
+
+	&_article
+		grid-template-areas	". preview ."\
+												". article ."\
+												". good-top ."\
+												". subscribe ."\
+												"foto-gallery foto-gallery foto-gallery"\
+												". read-more ."\
+												". good-bottom ."\
+												"video-gallery video-gallery video-gallery"
+
+		@media({min}: sm)
+			grid-template-areas ". preview preview ."\
+													". article article ."\
+													". good-top good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". read-more read-more ."\
+													". good-bottom good-bottom ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+		@media({min}: md)
+			grid-template-areas ". preview preview ."\
+													". article good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". read-more good-bottom ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+		@media({min}: lg)
+			grid-template-areas ". preview preview ."\
+													". article good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". read-more good-bottom ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+		@media({min}: xl)
+			grid-template-areas ". preview preview ."\
+													". article good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". read-more good-bottom ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+		@media({min}: xxl)
+			grid-template-areas ". preview preview ."\
+													". article good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". read-more good-bottom ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+	&_listing
+		grid-template-areas	". listing-top ."\
+												". good-top ."\
+												". subscribe ."\
+												"foto-gallery foto-gallery foto-gallery"\
+												". listing-middle ."\
+												". good-middle ."\
+												"video-gallery video-gallery video-gallery"\
+												". listing-bottom ."\
+												". good-bottom ." \
+												". about ."
+
+		@media({min}: sm)
+			grid-template-areas ". listing-top listing-top ."\
+													". good-top good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". listing-middle listing-middle ."\
+													". good-middle good-middle ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". listing-bottom listing-bottom ."\
+													". good-bottom good-bottom ." \
+													". about about ."
+
+		@media({min}: md)
+			grid-template-areas ". listing-top good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". listing-middle good-middle ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". listing-bottom good-bottom ." \
+													". about about ."
+		@media({min}: lg)
+			grid-template-areas ". listing-top good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". listing-middle good-middle ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". listing-bottom good-bottom ." \
+													". about about ."
+		@media({min}: xl)
+			grid-template-areas ". listing-top good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". listing-middle good-middle ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". listing-bottom good-bottom ." \
+													". about about ."
+		@media({min}: xxl)
+			grid-template-areas ". listing-top good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". listing-middle good-middle ."\
+													"video-gallery video-gallery video-gallery video-gallery"\
+													". listing-bottom good-bottom ." \
+													". about about ."
+
+	&_gallery-listing
+		grid-template-areas	". gallery-listing ."\
+												". good-top ."\
+												". subscribe ."\
+												". read-more ."\
+												". good-middle ."\
+												"video-gallery video-gallery video-gallery"
+
+		@media({min}: sm)
+			grid-template-areas ". gallery-listing gallery-listing ."\
+													". good-top good-top ."\
+													". subscribe subscribe ."\
+													". read-more read-more ."\
+													". good-middle good-middle ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+
+		@media({min}: md)
+			grid-template-areas ". gallery-listing good-top ."\
+													". subscribe subscribe ."\
+													". read-more good-middle ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+
+	&_video-listing
+		grid-template-areas	". video-listing ."\
+												". good-top ."\
+												". subscribe ."\
+												". read-more ."\
+												". good-middle ."\
+												"foto-gallery foto-gallery foto-gallery"
+
+		@media({min}: sm)
+			grid-template-areas ". video-listing video-listing ."\
+													". good-top good-top ."\
+													". subscribe subscribe ."\
+													". read-more read-more ."\
+													". good-middle good-middle ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"
+
+		@media({min}: md)
+			grid-template-areas ". video-listing good-top ."\
+													". subscribe subscribe ."\
+													". read-more good-middle ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"
+
+	&_gallery
+		grid-template-areas	"gallery gallery gallery"\
+												". content ."\
+												". good-top ."\
+												". subscribe ."\
+												"foto-gallery foto-gallery foto-gallery"\
+												". read-more ."\
+												". good-bottom ."\
+												"video-gallery video-gallery video-gallery"
+
+		@media({min} sm)
+			grid-template-areas ". gallery gallery ."\
+													". content content ."\
+													". good-top good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". read-more read-more ."\
+													". good-bottom good-bottom ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+
+		@media({min} md)
+			grid-template-areas ". gallery gallery ."\
+													". content good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". read-more good-bottom ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+
+	&_other
+		grid-template-areas	". other ."\
+												". good-top ."\
+												". subscribe ."
+
+		@media({min} sm)
+			grid-template-areas ". other other ."\
+													". good-top good-top ."\
+													". subscribe subscribe ."
+
+		@media({min} md)
+			grid-template-areas ". other good-top ."\
+													". subscribe subscribe ."
+
+	&_videoplayer
+		grid-template-areas	". videoplayer-preview ."\
+												". videoplayer-content ."\
+												". good-top ."\
+												". subscribe ."\
+												"foto-gallery foto-gallery foto-gallery"\
+												". read-more ."\
+												". good-bottom ."\
+												"video-gallery video-gallery video-gallery"
+
+		@media({min} sm)
+			grid-template-areas ". videoplayer-preview videoplayer-preview ."\
+													". videoplayer-content videoplayer-content ."\
+													". good-top good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". read-more read-more ."\
+													". good-bottom good-bottom ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+
+		@media({min} md)
+			grid-template-areas ". videoplayer-preview videoplayer-preview ."\
+													". videoplayer-content good-top ."\
+													". subscribe subscribe ."\
+													"foto-gallery foto-gallery foto-gallery foto-gallery"\
+													". read-more good-bottom ."\
+													"video-gallery video-gallery video-gallery video-gallery"
+	&__static
+		padding 10px 0
+		grid-template-columns: 10px auto 10px
+		@media({min}: sm)
+			grid-template-columns: 20px auto 20px
+			padding 20px 0
+		@media({min}: md)
+			grid-template-columns: auto 984px auto
+		@media({min}: lg)
+			grid-template-columns: auto 1126px auto
+		@media({min}: xl)
+			grid-template-columns: auto 1484px auto
+
+.hunt
+	grid-area hunt
+.guns
+	grid-area guns
+.foto-gallery
+	grid-area foto-gallery
+.fishing
+	grid-area fishing
+.dogs
+	grid-area dogs
+.video-gallery
+	grid-area video-gallery
+.kit
+	grid-area kit
+.transport
+	grid-area transport
+.article
+	grid-area article
+.listing-top
+	grid-area listing-top
+.listing-middle
+	grid-area listing-middle
+.listing-bottom
+	grid-area listing-bottom
+.gallery
+	grid-area gallery
+.read-more
+	grid-area read-more
+.about
+	grid-area about
+.gallery-content
+	grid-area content
+.gellary-listing
+	grid-area gallery-listing
+.video-listing
+	grid-area video-listing
+.videoplayer-content
+	grid-area videoplayer-content
+.videoplayer-preview
+	grid-area videoplayer-preview
+.search, .polls, .profile, .profiles-list, .editions
+	grid-area other

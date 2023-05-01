@@ -9,8 +9,11 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/style-resources": "^1.2.1",
     "@types/node": "^18",
-    "nuxt": "^3.4.1"
+    "nuxt": "^3.4.1",
+    "stylus": "^0.59.0",
+    "stylus-loader": "^3.0.2"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.9"

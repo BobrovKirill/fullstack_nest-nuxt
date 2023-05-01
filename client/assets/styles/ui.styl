@@ -1,0 +1,415 @@
+.ring-search
+	width 100%
+	height 100%
+	max-height 40px
+	position relative
+
+	@media ({max}: 1023px)
+		display none
+
+	@media screen and (-ms-high-contrast active), (-ms-high-contrast none)
+		position relative
+
+	&__label
+		display flex
+		align-items center
+		position absolute
+		right 0
+		bottom 0
+		min-width 40px
+		height 100%
+		background-color ringBg
+		&:before
+			content ""
+			display block
+			height 40px
+			pointer-events none
+			position absolute
+			top 0
+			left 0
+			width 30px
+			background-image linear-gradient(90deg, rgba(51, 51, 51, 0) 0, #333333)
+			transform translateX(-30px)
+		&-icon
+			position absolute
+			top 4px
+			right 0
+			cursor pointer
+			fill #AAAAAA
+
+	&__input
+		width 1px
+		height 1px
+		margin -1px
+		padding 0
+		border 0
+		white-space nowrap
+		clip-path inset(100%)
+		clip rect(0 0 0 0)
+		overflow hidden
+		background-color ringBg
+		&::-webkit-search-decoration,
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-results-button,
+		&::-webkit-search-results-decoration { display: none; }
+
+
+		&:focus,
+		&:valid
+			max-width 100%
+			width 340px
+			height 32px
+			padding 0 40px 0 8px
+			background none
+			border none
+			font inherit
+			color #aaaaaa
+			font-size 14px
+			box-shadow inset 0 -1px 0 0 #aaaaaa
+			outline none
+			clip-path none
+			clip none
+
+			@media ({min}: 1690px)
+				margin 0
+
+	&__button
+		display none
+		position absolute
+		bottom 4px
+		right 0
+		margin 0
+		padding 0
+		border none
+		background none
+		fill #AAAAAA
+
+
+	&__input
+		&:valid ~ button
+			display block
+
+		&:valid ~ label
+			svg
+				display none
+
+	&__icon
+		display block
+		fill #aaaaaa
+
+
+.form-search
+	position relative
+
+	width 100%
+	&__label
+		position absolute
+
+		height 1px
+		width 1px
+
+		overflow hidden
+	&__input
+		width 100%
+		height 48px
+
+		border-radius 10px
+		border 1px solid #BAC0B7
+
+		padding 15px 40px 15px 20px
+
+		&:placeholder
+			font-weight 400
+			font-size 18px
+			line-height 18px
+		&::-webkit-search-decoration,
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-results-button,
+		&::-webkit-search-results-decoration { display: none; }
+	&__button
+		position absolute
+		top 0
+		right 0
+
+		width 40px
+		height 100%
+
+		background-color inherit
+		border none
+		svg
+			margin 0 7px 0 auto
+			fill #AAAAAA
+
+.nav-search
+	.form-search__input
+		border none
+		border-radius 0
+		border-bottom 1px solid rgba(51, 51, 51, 0.1)
+		background-color transparent
+
+		padding 15px 40px 15px 40px
+	.form-search__button
+		right auto
+		left 0
+
+
+.button-icon
+	max-width 280px
+	width 100%
+	max-height 48px
+
+	padding 20px 10px
+
+	display flex
+	justify-content center
+	align-items center
+	gap 6px
+
+	font-size 14px
+	line-height 20px
+	font-weight 700
+	text-transform uppercase
+
+	border-radius 24px
+	border none
+	&__icon
+		border-radius 50px
+		display flex
+		justify-content center
+		align-items center
+		width 24px
+		height 24px
+	&.light
+		background-color primaryBg
+		color secondaryColor
+		.button-icon__icon
+			background-color #BAC0B7
+			fill primaryBg
+		&:hover
+			color hoverFontColor
+			.button-icon__icon
+				background-color primaryAccentColor
+
+
+	&.dark
+		background-color #BAC0B7
+		color #fff
+		.button-icon__icon
+			background-color #fff
+			fill #BAC0B7
+		&:hover
+			color hoverFontColor
+			.button-icon__icon
+				background-color primaryAccentColor
+				fill primaryBg
+
+	&.large
+		min-width 260px
+		min-height 48px
+
+.button-detail
+	width 198px
+	height 48px
+
+	display flex
+	justify-content center
+	align-items center
+
+	font-size 14px
+	line-height 20px
+	font-weight 700
+	text-transform uppercase
+	color #BAC0B7
+
+	border-radius 24px
+	border 2px solid #BAC0B7
+	background-color transparent
+	fill #BAC0B7
+
+	&_active,&:hover, &:active
+		border 2px solid #90978C
+		color #90978C
+		fill #90978C
+	&_active
+		svg
+			transform rotate(180deg)
+
+
+.listing-item
+	padding 0 20px
+	display flex
+	flex-direction column
+	gap 8px
+	@media({min} xxl)
+		gap 12px
+
+	&_news
+		padding 20px 0 0
+		.meta__rubric
+			display none
+
+	&__title
+		display block
+
+		font-family "Roboto", sans-serif
+		font-size 22px
+		line-height 26px
+		font-weight 700
+		color #565C68
+		hyphens auto
+		&:hover
+			color hoverFontColor
+		@media({min} xxl)
+			font-size 28px
+			line-height 36px
+
+.button
+	max-width 180px
+	width 100%
+	min-height 48px
+
+	display flex
+	justify-content center
+	align-items center
+
+	font-size 16px
+	line-height 20px
+	font-weight 700
+
+	border-radius 24px
+	border none
+	&.light
+		background-color #fff
+		color secondaryColor
+		&:hover
+			color hoverFontColor
+	&.dark
+		background-color #90978D
+		color #ffffff
+		&:hover
+			background-color mainFont
+
+
+.button__large
+	max-width 260px
+	width 100%
+	height 48px
+
+	display flex
+	justify-content center
+	align-items center
+
+	font-size 14px
+	line-height 20px
+	font-weight 700
+	text-transform uppercase
+	color #ffffff
+
+	background-color #BAC0B7
+	border-radius 24px
+	border none
+	&:hover
+		background-color mainFont
+	&.dark
+		background-color #90978D
+		color #ffffff
+		&:hover
+			background-color mainFont
+
+.dot
+	height 5px
+	width 5px
+
+	background-color #BAC0B7
+	border none
+	border-radius 50px
+	&_active
+		background-color primaryAccentColor
+		outline 2px solid primaryAccentColor
+		&:focus
+			outline 2px solid primaryAccentColor
+
+.text-line
+	display grid
+	grid-template-columns auto 1fr
+	align-items center
+	gap 10px
+
+	font-weight 700
+	font-size 12px
+	line-height 32px
+	text-transform uppercase
+
+	padding-left 20px
+	&:after
+		width 100%
+		content ''
+		height 1px
+		background-color #DDDDDD
+	@media({min} sm)
+		padding 0
+
+
+.button-slider
+	border-radius 100px
+	border none
+	background-color primaryBg
+	box-shadow 0px 0px 4px rgba(0, 0, 0, 0.25)
+
+	height 32px
+	width 32px
+
+	display flex
+	justify-content center
+	align-items center
+	fill #BAC0B7
+	&:first-child
+		transform rotate(90deg)
+	&:last-child
+		transform rotate(-90deg)
+	&:hover,&:active
+		box-shadow 0px 0px 4px secondaryColor
+		fill secondaryColor
+	&[disabled]
+		opacity 0.7
+
+.button-calendar
+	display flex
+	justify-content center
+	align-items center
+	flex-shrink 0
+
+	padding 0 10px 0 18px
+
+	height 48px
+	min-width 68px
+
+	border none
+	border-radius 100px
+	fill secondaryColor
+
+	color secondaryColor
+	font-weight 700
+	font-size 16px
+	line-height 22px
+	span
+		margin-left 6px
+	svg
+		height 24px
+		width 24px
+		fill secondaryColor
+		.fon
+			fill white
+		&:first-child
+			height 18px
+			width 18px
+
+	&.active,&:hover,&:active
+		background-color mainFont
+		color #F7F7F7
+		svg
+			fill #F7F7F7
+		&.active
+			svg
+				&:last-child
+					transform rotate(180deg)

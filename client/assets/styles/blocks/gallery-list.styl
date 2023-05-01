@@ -1,0 +1,100 @@
+.gallery-list
+	min-width 1px
+
+	background-image url(/static/images/main-bg.png)
+	background-repeat no-repeat
+	background-size cover
+	background-position center
+
+	padding 40px 0 30px
+
+	.button-icon
+		margin 0 auto
+
+	&__title
+		font-family: 'Verdana'
+		font-weight 700
+		text-transform uppercase
+		text-align center
+		color #ffffff
+		line-height 19px
+		font-size 16px
+
+		margin 0 0 20px
+		@media({min} sm)
+			text-align left
+
+			margin 0 0 20px 60px
+
+	&__slider
+		@media({max} sm - 1px)
+			padding 20px 0 50px
+			margin 0 -10px 20px
+			border-radius 10px
+			background-color #ffffff
+
+	&__list
+		display flex
+
+		gap 10px
+		@media({max} sm - 1px)
+			overflow-x auto
+			overflow-y hidden
+			scroll-snap-points-x repeat(100%)
+			scroll-snap-type x mandatory
+			scroll-behavior smooth
+			scrollbar-width none
+			&::-webkit-scrollbar
+				display none
+		@media({min} sm)
+			display grid
+			grid-template-columns 1fr 1fr
+			grid-template-rows 488px 237px 237px
+			grid-template-areas "li-1 li-1" \
+													"li-2 li-3" \
+													"li-4 li-5"
+			gap 20px
+
+			border-radius 10px
+			background-color #ffffff
+
+			padding 40px 40px 50px
+			margin-bottom 20px
+		@media({min} md)
+			grid-template-columns repeat(6, 1fr)
+			grid-template-rows 217px 217px 332px
+			grid-template-areas "li-1 li-1 li-1 li-1 li-2 li-2" \
+													"li-1 li-1 li-1 li-1 li-3 li-3" \
+													"li-4 li-4 li-4 li-5 li-5 li-5"
+
+		@media({min} xl)
+			grid-template-rows 252px 252px 386px
+		@media({min} xxl)
+			grid-template-columns repeat(4, 1fr)
+			grid-template-rows 252px 252px
+			grid-template-areas "li-1 li-1 li-2 li-3" \
+													"li-1 li-1 li-4 li-5"
+	&__item
+		flex-shrink 0
+		flex-basis: 276px
+		scroll-snap-align center
+		@media({max} sm - 1px)
+			height 208px
+		h3
+			font-size 22px
+			line-height 26px
+
+
+		for num in (1..5)
+			&:nth-child({num})
+				grid-area li-+num
+
+	&__dots
+		display flex
+		justify-content center
+		align-items center
+		gap 18px
+
+		margin-top 30px
+		@media({min} sm)
+			display none

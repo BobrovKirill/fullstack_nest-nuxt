@@ -1,0 +1,174 @@
+.comment
+	display grid
+	grid-template-columns 1fr 1fr
+	@media({max} sm - 1px)
+		.user
+			grid-column 2 span
+	&__hidden
+		position relative
+
+		border-top 1px dashed #DDDDDD
+		border-bottom 1px dashed #DDDDDD
+		padding 20px 0 15px
+		p, time, summary
+			color #BAC0B7!important
+		picture
+			filter grayscale(1)
+		&:before
+			content 'Комментарии скрыты'
+			position absolute
+			top -10px
+			left 0
+			background-color #f7f7f7
+			padding-right 10px
+
+			font-size 14px
+			font-weight 400
+			line-height 16px
+			color #BAC0B7
+
+	&__likes
+		position relative
+		margin-left auto
+		display flex
+		@media({max} sm - 1px)
+			grid-area 2 span
+
+			margin 10px 0
+		& > button, span
+			display flex
+			justify-content center
+			align-items center
+
+			height 40px
+			width 40px
+
+			background #FFFFFF
+			border 1px solid #DDDDDD
+
+			font-family 'Verdana'
+			font-weight 700
+			font-size 14px
+			line-height 17px
+			color #90978D
+			&:first-child
+				border-radius 3px 0px 0px 3px
+				color #9F2B11
+			&:last-child
+				border-radius: 0px 3px 3px 0px
+		.show-message
+			left auto
+			top 57px
+			right 0
+
+	&__text
+		grid-column 2 span
+
+		font-weight 400
+		font-size 14px
+		line-height 20px
+		color mainFont
+		font-family 'OpenSans'
+
+		margin 10px 0 14px
+		outline none
+		&[contenteditable]
+			padding 20px
+			background-color #fff
+			border-radius 24px
+			box-shadow 0px 0px 10px rgba(0, 0, 0, 0.140379)
+			border 1px solid #DDDDDD
+
+	&__btns
+		grid-column 2 span
+
+		position relative
+
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		gap 10px
+		.show-message
+			bottom 180px
+			left 50%
+			transform translateX(-50%)
+			height 140px
+
+	&__btn
+		border none
+		background-color transparent
+		cursor pointer
+
+		font-weight 700
+		font-size 14px
+		line-height 19px
+		color secondaryColor
+		&:hover
+			color hoverFontColor
+
+	&__answer
+		position relative
+		.show-message
+			top 27px
+			left 0
+			transform translateX(0)
+			height 81px
+	&__controls
+		display flex
+		flex-wrap wrap
+		column-gap 20px
+		row-gap 10px
+		margin-left auto
+		details
+			position relative
+		summary
+			width 24px
+			height 24px
+			border-radius 50px
+
+			display flex
+			flex-direction column
+			justify-content center
+			align-items center
+			gap 1px
+
+			cursor pointer
+			text-align center
+			&:hover
+				background-color #DDDDDD
+
+		ul
+			position absolute
+			top 30px
+			right 0
+
+			background-color #fff
+			box-shadow 0px 0px 30px rgba(0, 0, 0, 0.15)
+			border 1px solid #DDDDDD
+			border-radius 3px
+			padding 30px
+
+			display flex
+			flex-direction column
+			gap 10px
+			button
+				white-space nowrap
+
+	&__details
+		grid-column 2 span
+		margin-top 14px
+
+		summary
+			cursor pointer
+			font-family 'Verdana'
+			font-weight 700
+			font-size 14px
+			line-height 17px
+			color #90978D
+			&:hover
+				color hoverFontColor
+
+	&__summary
+		display flex
+		flex-direction row-reverse
+		justify-content flex-end

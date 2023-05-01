@@ -1,0 +1,52 @@
+.burger__btn
+	position relative
+	z-index 5
+
+	display block
+	justify-self end
+
+	width 45px
+	height 45px
+
+	cursor pointer
+	background-color thirdColor
+	border 1px solid secondaryColor
+	border-radius 100px
+
+	&::before,
+	&::after,
+	span
+		position absolute
+		left 9px
+		width 25px
+
+		height 2px
+
+		transition all 0.3 ease 0s
+		background-color secondaryColor
+	&::before
+		content ''
+		top 14px
+
+	&:after
+		content ''
+		bottom 13px
+
+	& span
+		top 50%
+		transform scale(1) translate(0px, -50%)
+
+	&.active
+		span
+			transform: scale(0) translate(0px, -50%)
+
+		&::after
+			bottom 50%
+			transform rotate(45deg) translate(0px, 40%)
+
+		&::before
+			top 50%
+			transform rotate(-45deg) translate(0px, -65%)
+
+	@media ({min}: md)
+		display none

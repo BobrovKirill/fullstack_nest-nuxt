@@ -1,0 +1,82 @@
+.subrubrics
+	position relative
+
+	display flex
+	align-items center
+	gap 6px
+
+	padding 10px 0
+	min-width 0
+	&:after, &:before
+		content ''
+
+		position absolute
+		top 0
+		height 100%
+		transform rotate(-90deg)
+		pointer-events none
+	&:before
+		left 0
+		width 50px
+		background linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+	&:after
+		right 5px
+		width 30px
+		background linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+		@media({min} sm)
+			right 84px
+	&.disable-control
+		.subrubrics__control
+			display none
+		&:after, &:before
+			content none
+
+	&__container
+		display flex
+		gap 6px
+
+		padding-right 10px
+		overflow-x auto
+		overflow-y hidden
+
+		&::-webkit-scrollbar
+			display none
+		scrollbar-width: none;
+		@media({max} md - 1px)
+			scroll-snap-points-x repeat(100%)
+			scroll-snap-type x mandatory
+			scroll-behavior smooth
+			scrollbar-width none
+	&__control
+		display none
+		@media({min} sm)
+			display flex
+			gap 4px
+
+
+.subrubric-btn
+	flex-shrink 0
+	scroll-snap-align start
+	a
+		height 32px
+
+		display flex
+		justify-content center
+		align-items center
+
+
+		padding 0 14px
+
+		border-radius 100px
+		border none
+		background-color secondaryBg
+		border 1px solid secondaryBg
+
+		color secondaryColor
+		font-weight 700
+		font-size 12px
+		line-height 16px
+		text-transform uppercase
+	&:hover, &_active
+		a
+			border 1px solid secondaryColor

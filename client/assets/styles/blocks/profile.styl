@@ -1,0 +1,237 @@
+.profile
+	&__back-link
+		position relative
+		display inline-block
+		margin 40px 0 0 22px
+		border-bottom 1px solid primaryAccentColor
+		&:before
+			content url("data:image/svg+xml; utf8, <svg width='16' height='6' viewBox='0 0 16 6' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M2.04853 2.09223L3.20788 0.944084L2.49735 0.240417L0.355331 2.36174L6.58035e-05 2.71357L0.355331 3.0654L2.49735 5.18672L3.20788 4.48306L1.80348 3.09223H15.0923V2.09223H2.04853Z' fill='%23565C68'/></svg>")
+			position absolute
+			left -22px
+			top -1px
+			width 16px
+	&__body
+		display flex
+		flex-direction column
+		gap 40px
+		padding 40px 0
+		@media({min} xxl)
+			padding 40px 90px
+	&__section
+		hr
+			margin-top 60px
+			height 1px
+
+			border none
+			background #DDDDDD
+			color #DDDDDD
+		&.general-section
+			.profile__form
+				padding 0
+				&.profile__img
+					justify-self center
+					@media({min} sm)
+						grid-row span 4
+			.profile__info
+				@media({min} sm)
+					grid-template-columns auto 1fr
+				span
+					display inline
+			.profile__form
+				@media({min} sm)
+					grid-template-columns auto 1fr
+			.profile__form-inner
+				@media({min} sm)
+					grid-column 2/3
+			.profile__form-btns
+				@media({min} sm)
+					grid-column 2/3
+					justify-content center
+			.error-message
+				@media({min} sm)
+					grid-column 2/3
+
+		&.show-form
+			.profile__info
+				display none
+			.profile__form
+				display grid
+		// &:nth-last-child(2)
+		// 	.profile__info
+		// 		grid-template-columns 1fr
+
+	&__info
+		display grid
+		grid-template-columns 1fr
+		justify-items center
+		gap 20px
+		@media({min} sm)
+			grid-template-columns repeat(2, 1fr)
+			justify-items start
+	&__img
+		position relative
+		height 158px
+		width 158px
+
+		border-radius 50px
+		background url(/static/images/avatar-placeholder.png)
+		background-repeat no-repeat
+		background-size cover
+		input[type="file"]
+			position absolute
+			bottom 0
+			right 0
+
+			height 1px
+			width 1px
+			overflow hidden
+
+			& + label
+				position absolute
+				bottom 0
+				right 0
+				z-index 2
+
+				display flex
+				justify-content center
+				align-items center
+
+				height 48px
+				width 48px
+
+				background-color #5D6359
+				border-radius 100px
+				cursor pointer
+
+	&__content
+		@media({max} sm - 1)
+			width 100%
+		& > h3
+			font-weight 700
+			font-size 24px
+			line-height 33px
+			color secondaryColor
+			margin-bottom 20px
+			@media({max} sm - 1)
+				text-align center
+		& > p
+			margin-bottom 10px
+			font-weight 700
+			font-size 16px
+			line-height 22px
+			color secondaryColor
+		span
+			display block
+			font-weight 400
+	&__title
+		font-weight 700
+		font-size 24px
+		line-height 33px
+
+		margin-bottom 20px
+		@media({min} sm)
+			grid-column span 2
+		span
+			display block
+			font-size 14px
+			line-height 19px
+
+	&__fill-btn
+		background-color transparent
+		border none
+		margin-top 10px
+		justify-self start
+		@media({min} sm)
+			grid-column span 2
+		span
+			border-bottom 1px solid primaryAccentColor
+
+	&__last-comments
+		display flex
+		flex-direction column
+		gap 20px
+		h4
+			font-family 'Roboto'
+			font-weight 700
+			font-size 18px
+			line-height 24px
+			color secondaryColor
+
+			margin-bottom 6px
+		p
+			font-weight 400
+			font-size 16px
+			line-height 22px
+			color secondaryColor
+
+	&__form
+		display none
+		grid-template-columns 1fr
+		gap 20px
+		padding 0 0 40px
+		@media({min} xxl)
+			padding 0 90px
+		.error-message
+			color #FF0000
+			align-items start
+			font-weight 400
+			font-size 12px
+			line-height 18px
+
+	&__form-inner
+		display flex
+		flex-direction column
+		gap 20px
+		h3
+			margin-bottom -10px
+
+			font-weight 700
+			font-size 18px
+			line-height 24px
+			color secondaryColor
+		span
+			display block
+
+			font-size 14px
+			line-height 19px
+		label
+			position absolute
+			height 1px
+			width 1px
+
+			overflow hidden
+		input, textarea
+			border-radius 10px
+			border 1px solid #BAC0B7
+
+			padding 15px 20px
+			&::placeholder
+				color: #BAC0B7
+			&.error
+				border 1px solid #FF0000
+
+	&__form-btns
+		display flex
+		justify-content flex-start
+		gap 10px
+
+		margin-top 20px
+		button
+			&:last-child
+				border 2px solid #90978C
+				color #90978C
+			&[disabled]
+				background-color secondaryBg
+				color #BAC0B7
+				pointer-events none
+	&__listing
+		display flex
+		flex-direction column
+		gap 20px
+		margin-top 40px
+		@media({min} sm)
+			padding 0 90px
+
+	&__listing-user
+		hr
+			margin-top 20px

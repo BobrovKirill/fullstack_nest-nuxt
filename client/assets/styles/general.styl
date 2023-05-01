@@ -1,0 +1,198 @@
+.webp
+	.gallery-list,.news
+		background-image url('/static/images/main-bg.webp')
+	.figure-news,.news__content-img a,.read-material__img
+		background-image url('/static/images/placeholder.webp')
+	.preview__figure
+		&.empty
+			background-image url('/static/images/placeholder.webp')
+
+
+.main
+	background-color primaryBg
+	&__dark
+		background-color secondaryBg
+
+
+.grid-container__index
+	.subscribe
+		background-color primaryBg
+		@media({min}: sm)
+			padding 30px 0
+			margin-top -20px
+
+
+.no-scroll
+	overflow hidden
+	.header__wrapper
+		@media({min} md)
+			padding 0 55px 0 40px
+	.ring
+		padding-right 15px
+
+.hr
+	border none
+	color rgba(51, 51, 51, 0.1)
+	background rgba(51, 51, 51, 0.1)
+	height 1px
+
+.social-sharing
+
+	.share
+		&__list
+			display flex
+
+		&__link
+			height 32px
+			width 32px
+
+			display flex
+			justify-content center
+			align-items center
+
+			filter grayscale(100%) contrast(10%)
+			border none
+			border-radius 50%
+
+			&:hover,
+			&:active
+				background-color thirdColor
+				filter none
+
+.social-sharing_color
+	.share
+		&__link
+			height 40px
+			width 40px
+
+			display flex
+			justify-content center
+			align-items center
+
+			filter none
+			border 1px solid #DDDDDD
+			border-right none
+			border-radius 0
+			&:hover,
+			&:active
+				background-color transparent
+				svg
+					filter grayscale(100%) contrast(10%)
+
+		li
+			&:first-child
+				a
+					border-radius: 3px 0px 0px 3px
+
+			&:last-child
+				a
+					border-right 1px solid #DDDDDD
+					border-radius 0px 3px 3px 0px
+
+
+
+
+.cursor
+	cursor: url('/static/images/cursor.svg') 4 12,auto
+
+.btn-loader
+	width 20px
+	height 20px
+	animation: spin 1s linear infinite
+
+	circle
+		fill none
+		stroke #bac0b7
+		stroke-width 6px
+		stroke-linecap round
+		animation dash 1.5s ease-in-out infinite
+
+	@keyframes spin
+		100%
+				rotate 360deg
+
+	@keyframes dash
+		0%
+			stroke-dasharray 1, 150
+			stroke-dashoffset 0
+		50%
+			stroke-dasharray 90, 150
+			stroke-dashoffset -35
+		100%
+			stroke-dasharray 90, 150
+			stroke-dashoffset -124
+// Фулл скрин лоадер, удалить если не понадобиться больше
+// .form-loader
+// 	position fixed
+// 	top 0
+// 	left 0
+// 	z-index 100
+
+// 	width 100vw
+// 	height 100vh
+// 	background-color rgba(0, 0, 0, 0.9)
+// 	&:after
+// 		content url('/static/images/loading.svg')
+
+// 		position absolute
+// 		top 50%
+// 		left 50%
+
+// 		animation-name bar-loader
+// 		animation-duration 1.3s
+// 		animation-iteration-count infinite
+// 		animation-timing-function ease-in-out
+
+// 		@keyframes bar-loader
+// 			from
+// 				transform translate(-50%, -50%) rotate(0deg)
+// 			100%
+// 				transform translate(-50%, -50%) rotate(-360deg)
+
+.grecaptcha-badge
+	visibility hidden !important
+
+.check
+	&:after
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		z-index 0
+
+		background rgba(0, 0, 0, 0.6)
+		content ''
+
+	.reportage__link, .reportage__cursor-img
+		cursor: url('/static/images/icon-check.svg') 32 32,auto
+	.reportage__about
+		justify-content flex-start
+	.reportage__title
+		display none
+	.reportage__text
+		display -webkit-box
+		display -moz-box
+	.reportage__footer
+		display none
+
+.foto-gallery
+	.check
+		.reportage__link, .reportage__cursor-img
+			cursor: url('/static/images/foto-check.svg') 32 32,auto
+
+.video-gallery
+	.check
+		.reportage__link, .reportage__cursor-img
+			cursor: url('/static/images/video-check.svg') 32 32,auto
+
+.foto-gallery, .video-gallery
+	@media({min} sm)
+		li
+			&:first-child
+				h3
+					font-size 36px
+					line-height 44px
+			&:not(:first-child)
+				h3
+					margin-bottom 10px

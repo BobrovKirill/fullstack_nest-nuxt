@@ -1,0 +1,35 @@
+.other-news
+	background primaryBg
+	box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+	border-radius 10px
+
+	padding 40px 0 60px
+	@media({min} sm)
+		padding 60px 40px 60px
+
+	&__title
+		margin-bottom 20px
+		padding 0 20px
+
+		font-weight 700
+		font-size 26px
+		line-height 36px
+		text-transform uppercase
+		color secondaryColor
+		@media({min} sm)
+			padding 0
+
+	&__list
+		display flex
+		flex-direction column
+		gap 20px
+		li
+			&:last-child
+				hr
+					display none
+	&__ad
+		overflow hidden
+
+		padding 0 10px
+		@media({min} sm)
+			padding 0

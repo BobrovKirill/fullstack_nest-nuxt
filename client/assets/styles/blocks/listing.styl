@@ -1,0 +1,80 @@
+.listing
+	min-width 0
+	&__container
+		display grid
+		grid-template-columns 1fr
+		gap 10px
+
+		@media({min} md)
+			grid-template-columns 1fr 336px
+			gap 20px
+
+	&__content
+		background-color primaryBg
+		border-radius 10px
+		box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+
+		padding 40px 20px
+		min-width 0
+		height 100%
+		@media({min} sm)
+			padding 60px 40px
+
+	&__title
+		margin-bottom 6px
+
+		text-transform uppercase
+		font-weight 700
+		font-size 36px
+		line-height 36px
+		color secondaryColor
+
+	&__edition
+		margin-top 20px
+		.editions__edition
+			max-width 100%
+		.editions__edition-img
+			width 90px
+			height 128px
+
+	&__calendar
+		margin 30px 0 60px
+
+	&__body
+		display flex
+		flex-direction column
+		gap 40px
+		li
+			&:last-child
+				hr
+					display none
+		.listing-item
+			hr
+				display none
+			&:not(:first-child)
+				border-top 1px solid #DDDDDD
+
+	&__footer
+		display flex
+		justify-content center
+		gap 10px
+
+		margin-top 20px
+		@media({min} sm)
+			margin-top 60px
+
+	&__about
+		background-color primaryBg
+		border-radius 10px
+		box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+
+		padding 60px 40px 60px
+		@media({min} md)
+			grid-column span 2
+		h2
+			font-family 'Verdana'
+			font-weight 700
+			font-size 16px
+			line-height 28px
+
+			margin-bottom 20px

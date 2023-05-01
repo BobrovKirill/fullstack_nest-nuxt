@@ -1,0 +1,58 @@
+*, *::before, *::after {
+	reset()
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	position relative
+	font-family: "OpenSans", sans-serif;
+	font-size: fontsize;
+	color: mainFont
+	background-color: primaryBg;
+	margin: 0;
+}
+
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: anywhere;
+	hyphens: auto;
+	margin 0
+}
+
+// button, a, summary
+// 	cursor: url('./images/cursor.svg') 25 25,auto;
+
+a
+	color inherit
+
+a,button,input
+	&:focus-visible
+		outline 2px solid hoverFontColor
+		outline-offset 2px
+
+button:not([disabled]),
+input:not([disabled]):not([type="text"]):not([type="search"])
+	cursor: pointer;
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;

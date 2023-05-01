@@ -1,0 +1,71 @@
+.new-comments
+	grid-area new-comments
+
+	padding 40px 0 60px
+
+	background-color #ffffff
+	border-radius 10px
+	box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+	@media({min} sm)
+		padding 40px 40px 60px
+	@media({min} md)
+		padding 40px 40px 80px
+	@media({min} xl)
+		padding 40px 40px 100px
+
+	&__title
+		font-family: 'Verdana'
+		font-weight 700
+		font-size 16px
+		line-height 19px
+		text-transform uppercase
+		color secondaryColor
+		text-align center
+
+		margin-bottom 20px
+		@media({min} sm)
+			text-align left
+		@media({min} md)
+			margin-left 20px
+		@media({min} xl)
+			margin-bottom 40px
+
+	&__comments
+		display grid
+		grid-template-columns 1fr
+		grid-template-rows repeat(2, auto)
+		row-gap 40px
+
+		padding 0 20px
+		@media({min} sm)
+			grid-template-columns 1fr 1fr
+			grid-template-rows repeat(1, auto)
+
+			padding 0
+		@media({min} xl)
+			padding 0 50px
+		@media({min} xl)
+			row-gap 40px
+	&__comment
+		display flex
+		flex-direction column
+		gap 12px
+
+		padding 0 20px
+		@media({min} xl)
+			padding 0 20px
+
+	&__news
+		font-family "Roboto", sans-serif
+		font-size 22px
+		line-height 26px
+		font-weight 700
+		color secondaryColor
+
+	&__text
+		font-size 14px
+		line-height 20px
+		font-weight 400
+
+
+

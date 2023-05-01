@@ -1,0 +1,81 @@
+.social-subscription
+	background #F7F7F7
+	border-radius 10px
+	padding 30px 10px 40px
+	@media({min} sm)
+		padding 40px 20px
+	@media({min} md)
+		padding 40px 30px
+	@media({min} xl)
+		padding 40px 20px
+	@media({min} xxl)
+		padding 40px 90px
+
+	&__title
+		font-family 'Roboto'
+		font-weight 700
+		font-size 18px
+		line-height 24px
+		text-align center
+		color secondaryColor
+		@media({min} sm)
+			font-size 22px
+			line-height 30px
+		@media({min} xl)
+			font-size 28px
+			line-height 36px
+
+	&__links
+		display flex
+		justify-content center
+		gap 6px
+
+		margin-top 14px
+		@media({min} sm)
+			gap 10px
+
+			margin-top 20px
+		@media({min} xxl)
+			gap 20px
+
+		li
+			max-width 170px
+			width 100%
+			@media({min} xl)
+				max-width 220px
+
+	&__link
+		display flex
+		flex-direction row-reverse
+		justify-content center
+		align-items center
+		gap 6px
+
+		height 48px
+		width 100%
+
+		padding 0 12px
+
+		font-weight 700
+		font-size 12px
+		line-height 20px
+		color secondaryColor
+
+		background #FFFFFF
+		border-radius 24px
+		filter drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.140379))
+		&:hover
+			font-weight 700
+			color hoverFontColor
+			filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15))
+		@media({min} sm)
+			font-size 16px
+
+
+		svg
+			flex-shrink 0
+			height 12px
+			width 12px
+			@media({min} sm)
+				height 24px
+				width 24px

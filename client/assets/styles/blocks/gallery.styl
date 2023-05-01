@@ -1,0 +1,410 @@
+.gallery
+	background-color secondaryBg
+	min-width 0
+	@media({min} sm)
+		padding 40px 40px 60px
+
+		background-color primaryBg
+		border-radius 10px
+		box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+
+	&__slider
+		position relative
+		figcaption
+			display none
+			padding 20px 0 20px
+
+			border-bottom-right-radius 10px
+			border-bottom-left-radius 10px
+
+			background-color #F7F7F7
+
+			text-align center
+			font-weight 700
+			font-size 12px
+			line-height 16px
+			text-transform uppercase
+
+		&.disable
+			.gallery__about
+				left -100%
+				width 0
+			figcaption
+				&:not(:empty)
+					display block
+
+	&__about
+		display flex
+		flex-direction column
+		justify-content center
+		align-items center
+		gap 20px
+		&:before
+				content ''
+
+				position absolute
+				top 10px
+				left 10px
+				right 10px
+				bottom 100px
+				z-index -1
+				background url('/static/images/gallery-mask.png')
+				background-repeat no-repeat
+				background-size cover
+
+		@media({min} sm)
+			position absolute
+			top 0
+			left 0
+			z-index 1
+
+			height 100%
+			width 100%
+
+			background rgba(52, 64, 79, 0.2)
+			backdrop-filter blur(20px)
+			transition left 0.4s ease-in-out, width 0s ease 0.5s
+			&:before
+				content none
+		@media({max} sm - 1)
+			position relative
+			z-index 1
+			order -1
+
+			padding 35px 20px 20px
+			margin 0 10px 20px
+
+			background-color primaryBg
+			border-radius 10px
+
+		&-content
+			color white
+
+			max-width 100%
+			min-width 1px
+			@media({min} sm)
+				max-width 480px
+			@media({min} md)
+				max-width 600px
+			@media({min} xl)
+				max-width 690px
+			@media({min} xxl)
+				max-width 870px
+
+			h1
+				text-align center
+				color white
+				font-size 28px
+				line-height 32px
+				font-weight 700
+				font-family 'Roboto'
+				@media({min} sm)
+					font-size 32px
+					line-height 36px
+				@media({min} md)
+					font-size 40px
+					line-height 44px
+				@media({min} xl)
+					font-size 44px
+					line-height 48px
+				@media({min} xxl)
+					line-height 52px
+
+			p
+				font-weight 400
+				font-size 16px
+				line-height 24px
+				@media({min} sm)
+					font-size 18px
+					line-height 28px
+				@media({min} md)
+					font-size 24px
+					line-height 38px
+				@media({min} xl)
+					font-size 26px
+					line-height 40px
+				@media({min} xxl)
+					font-size 28px
+					line-height 40px
+
+		&-social
+			margin-top 20px
+			color white
+			text-align center
+			text-transform uppercase
+			font-size 12px
+			line-height 16px
+			@media({max} sm - 1)
+				margin-top 65px
+				p
+					color secondaryColor
+			.social-sharing
+				margin-top 13px
+			li
+				background-color #fff
+
+	&__body
+		position relative
+		overflow hidden
+		@media({max} sm - 1)
+			display flex
+			flex-direction column
+
+	&__imgs
+		position relative
+
+		display flex
+
+		overflow-x auto
+		overflow-y hidden
+		scroll-snap-points-x repeat(100%)
+		scroll-snap-type x mandatory
+		scrollbar-width none
+		&::-webkit-scrollbar
+			width 0px
+			height 0px
+		@media({min} sm)
+			height calc(100vh - 73px - 40px - 100px)
+		@media({max} sm - 1)
+			padding 20px 10px 10px
+
+			background-color primaryBg
+			border-top-left-radius 10px
+			border-top-right-radius 10px
+			gap 10px
+
+	&__img
+		position relative
+		z-index 1
+
+		flex-shrink 0
+		overflow hidden
+		scroll-snap-align center
+
+		width calc(100vw - 20px)
+		height calc(100vw - 20px)
+		&:after
+			content ''
+
+			position absolute
+			top 0
+			left 0
+			z-index -1
+			width 100%
+			height 100%
+			background rgba(52, 64, 79, 0.2)
+		@media({min} sm)
+			width 100%
+			height 100%
+		img
+			transition width 0.5s
+			width 100%
+			height 100%
+
+	&__front
+		object-fit contain
+		&.disabled
+			width 1px
+	&__back
+		display block
+		position absolute
+		width 100%
+		height 100%
+		top 0
+		left 0
+		z-index -1
+		object-fit cover
+		object-position center
+		filter blur(20px)
+		@media({min} sm)
+			display block
+			position absolute
+			width 100%
+			height 100%
+			top 0
+			left 0
+			z-index -1
+			object-fit cover
+			object-position center
+			filter blur(20px)
+	&__control
+		display none
+		@media({min} sm)
+			position absolute
+			top 50%
+			left 0
+			right 0
+			z-index 2
+
+			transform translate(0, -50%)
+
+			display flex
+			justify-content space-between
+
+			padding 0 4%
+
+			button
+				width 48px
+				height 48px
+
+	&__preview
+		@media({min} sm)
+			position absolute
+			left 0
+			right 0
+			bottom 0
+			z-index 1
+
+			padding 0
+			min-width 0
+		&-btn
+			width 100%
+			height 48px
+
+			margin-left auto
+			padding 16px 33px 0
+
+			border none
+			background: ringBg
+
+
+			font-weight 700
+			font-size 18px
+			line-height 25px
+			text-transform uppercase
+			color white
+			text-align right
+
+			display flex
+			align-items center
+			justify-content space-between
+
+			&_counter
+				&:after
+					content url("data:image/svg+xml; utf8, <svg width='100%' height='100%' viewBox='0 0 23 13' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M22.2924 12.3931C22.6829 12.0026 22.6829 11.3695 22.2924 10.9789L12.3929 1.07943C12.0024 0.688908 11.3692 0.688908 10.9787 1.07943C10.9784 1.07976 10.978 1.08009 10.9777 1.08042L1.0792 10.9789C0.688678 11.3695 0.688677 12.0026 1.0792 12.3931C1.46973 12.7837 2.10289 12.7837 2.49342 12.3931L11.6858 3.20075L20.8782 12.3931C21.2687 12.7837 21.9019 12.7837 22.2924 12.3931Z' fill='white'/></svg>")
+
+					display inline-block
+
+					width 16px
+					height 16px
+
+					margin-left 12px
+					@media({max} sm - 1)
+						content none
+
+			@media({min} sm)
+				max-width 170px
+
+				padding 0 33px
+
+				background rgba(0, 0, 0, 0.6)
+				transition max-width .8s
+
+				justify-content flex-end
+
+			&_figcaption
+				font-size 12px
+				line-height 16px
+				text-transform uppercase
+				@media({min} sm)
+					display none
+
+		&-list
+			max-width 100%
+
+			display flex
+			gap 20px
+
+			padding 0 10px 16px
+
+			background ringBg
+			border-bottom-right-radius 10px
+			border-bottom-left-radius 10px
+
+			overflow-x auto
+			overflow-y hidden
+			scroll-snap-points-x repeat(100%)
+			scroll-snap-type x mandatory
+			scroll-behavior smooth
+			scrollbar-width none
+			&::-webkit-scrollbar
+				width 0px
+				height 0px
+			@media({min} sm)
+				max-height 0
+
+				padding 0 40px 0
+				background: rgba(0, 0, 0, 0.6)
+				transition max-height .5s
+				border-radius 0
+
+		&-item
+			width 67px
+			height 50px
+
+			border none
+			flex-shrink 0
+
+			margin 20px 0
+			@media({min} sm)
+				width 220px
+				height 160px
+
+				margin 4px 0 20px
+			@media({min} md)
+				width 100px
+				height 80px
+			@media({min} lg)
+				width 220px
+				height 160px
+			button
+				width 100%
+				height 100%
+				border none
+			img
+				height 100%
+				width 100%
+				object-fit cover
+			&_active
+				border 4px solid white
+
+		&.active
+			.gallery__preview-btn
+				max-width 100%
+			.gallery__preview-btn_counter
+				&:after
+					transform-origin: center bottom
+					transform rotate(-180deg)
+			.gallery__preview-list
+				max-height 200px
+			.gallery__preview-control
+				opacity 1
+
+		&-control
+			display none
+			@media({min} sm)
+				position absolute
+				top calc(50%)
+				left 0
+				right 0
+
+				transform translate(0, -50% + 40px)
+				pointer-events none
+				opacity 0
+				transition opacity 0s ease 0.2s
+
+				display flex
+				justify-content space-between
+
+				padding 0 10px
+
+				button
+					pointer-events auto
+
+					width 48px
+					height 48px
+
+.gallery-content
+	padding 60px 20px
+	@media({min} xxl)
+		padding 60px 40px 40px

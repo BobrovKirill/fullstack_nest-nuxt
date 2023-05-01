@@ -1,0 +1,56 @@
+.best-news
+	display grid
+	grid-template-columns 1fr
+	grid-template-rows auto auto auto
+	justify-items center
+	row-gap 6px
+	@media({min} md)
+		grid-template-columns auto 1fr
+		grid-template-rows auto auto
+		column-gap 20px
+		justify-items flex-start
+	&__img
+		grid-row 2 span
+
+		position relative
+
+		width 72px
+		height 72px
+
+		border-radius 50px
+		overflow hidden
+
+
+		img
+			height 100%
+			width 100%
+
+			object-fit cover
+			filter: contrast(30%) brightness(130%)
+
+			transition transform .3s ease-in-out
+
+		span
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+
+			font-size 22px
+			line-height 29px
+			color thirdColor
+			font-weight 700
+
+		&:hover
+			img
+				transform scale(1.5)
+
+	&__title
+		font-family "Roboto", sans-serif
+		font-size 22px
+		line-height 26px
+		font-weight 700
+		color secondaryColor
+		hyphens auto
+		&:hover
+				color hoverFontColor

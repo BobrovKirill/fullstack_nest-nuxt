@@ -1,0 +1,154 @@
+.rubric-big
+	padding 0 0 60px
+
+	background-color #ffffff
+	border-radius 10px
+	box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+	@media({min} sm)
+		padding 40px 40px 60px
+	@media({min} xl)
+		padding 40px 40px 50px
+
+	&__top
+		display grid
+		grid-template-columns 1fr
+		grid-template-rows auto auto
+		gap 30px
+
+		margin-bottom 30px
+		@media({min} sm)
+			gap 40px
+			margin-bottom 40px
+		@media({min} xxl)
+			grid-template-columns 336px 1fr
+			grid-template-rows auto
+			gap 20px
+
+		&-foto
+			height calc(100vw * 0.75)
+			@media({min} sm)
+				height 448px
+			@media({min} md)
+				height 412px
+			@media({min} xl)
+				height 520px
+
+	&__news
+		display flex
+		flex-direction column
+		gap 12px
+
+		padding 20px 20px 0
+		@media({min} sm)
+			padding 20px 20px 0
+		@media({min} lg)
+			padding 0 20px 0
+
+		a
+			&:hover
+				.rubric-big__title
+					color hoverFontColor
+
+
+	&__title
+		font-family "Roboto", sans-serif
+		font-size 26px
+		line-height 32px
+		font-weight 700
+		overflow-wrap normal
+		color secondaryColor
+
+		margin-bottom 12px
+		@media({min} sm)
+			font-size 32px
+			line-height 36px
+	&__text
+		font-weight 400
+		line-height 24px
+
+	&__down
+		display grid
+		grid-template-columns 1fr
+		grid-template-rows repeat(2, auto)
+		row-gap 10px
+		@media({min} md)
+			row-gap 20px
+		@media({min} lg)
+			row-gap 40px
+		@media({min} xl)
+			grid-template-columns 336px 1fr
+			grid-template-rows auto
+			gap 20px
+		.rubric-big__title
+			@media({min} xl) and ({max} xxl)
+				font-size 22px
+				line-height 26px
+		&-foto
+			height calc(100vw * 0.75)
+			@media({min} sm)
+				height 448px
+			@media({min} md)
+				height 412px
+			@media({min} xl)
+				height 252px
+				.reportage__title
+					font-size 22px
+					line-height 26px
+	.button-icon
+		margin 30px auto 0
+		border 2px solid #BAC0B7
+		@media({min} sm)
+			margin 40px auto 0
+
+.rubric-small
+	display grid
+	grid-template-columns 1fr
+	grid-template-rows auto auto auto
+	gap 30px
+
+	padding 40px 0 60px
+
+	background-color #ffffff
+	border-radius 10px
+	box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+	@media({min} sm)
+		gap 40px
+
+		padding 45px 20px 60px
+	@media({min} md)
+		grid-template-columns 300px 1fr
+		grid-template-rows auto auto
+		gap 20px
+		padding 45px 40px 60px
+	@media({min} xl)
+		grid-template-columns 335px 1fr
+
+		padding 45px 40px 50px
+
+	&__list
+		display flex
+		flex-direction column
+		gap 40px
+
+	.listing-item__title
+		@media({min} lg)
+			font-size 22px
+			line-height 26px
+
+
+	&__foto
+		height calc(100vw * 0.75)
+		@media({min} sm)
+			height 488px
+		@media({min} md)
+			height 445px
+		@media({min} xl)
+			height 512px
+
+	.button-icon
+		margin 30px auto 0
+		border 2px solid #BAC0B7
+		@media({min} sm)
+			margin 40px auto 0
+		@media({min} md)
+			grid-column span 2

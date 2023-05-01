@@ -1,0 +1,664 @@
+.article
+	background-color primaryBg
+	box-shadow 0px 2px 8px rgba(0, 0, 0, 0.203917)
+	border-radius 10px
+
+	overflow hidden
+	height 100%
+
+	padding 24px 0 65px
+	@media({min} sm)
+		padding 30px 20px 70px
+	@media({min} xl)
+		padding 45px 20px 70px
+	@media({min} xxl)
+		padding 45px 40px 80px
+	// &__content
+
+
+.content
+	position relative
+	min-width 1px
+	& > p
+		margin-bottom 30px
+		padding 0 20px
+
+		font-family 'Roboto'
+		font-weight 300
+		font-size 16px
+		line-height 26px
+		@media({min} sm)
+			font-size 18px
+			line-height 28px
+
+			margin-bottom 40px
+			padding 0 20px
+		@media({min} xxl)
+			font-size 20px
+			line-height 32px
+
+			padding 0 90px
+		a
+			border-bottom 1px solid primaryAccentColor
+
+	blockquote
+		position relative
+
+		display block
+
+		background-color #F7F7F7
+		border-radius 10px
+
+		padding 60px 20px 60px
+		margin-bottom 40px
+		&:before
+			content url("data:image/svg+xml; utf8, <svg width='32' height='30' viewBox='0 0 32 30' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0 0V30H7.23123L12.1081 14.4886V0H0ZM19.8919 0V30H27.1231L32 14.4886V0H19.8919Z' fill='%23BAC0B7'/></svg>")
+
+			display block
+
+			position absolute
+			top 20px
+			left 20px
+
+			width 32px
+			height 31px
+		@media({min} sm)
+			padding 80px 20px 90px 80px
+			&:before
+				top 40px
+				left 30px
+		@media({min} xxl)
+			padding 70px 90px 90px
+			&:before
+				left 40px
+
+		p
+			font-family 'Roboto'
+			font-style normal
+			font-weight 700
+			font-size 20px
+			line-height 32px
+			color secondaryColor
+			@media({min} sm)
+				font-size 26px
+				line-height 38px
+			@media({min} xxl)
+				font-size 28px
+				line-height 40px
+
+		&.autor
+			padding 60px 20px 40px
+			@media({min} sm)
+				padding 80px 20px 50px 80px
+			@media({min} xxl)
+				padding 70px 90px 50px
+
+			figure
+				display flex
+				justify-content center
+				align-items center
+				gap 10px
+
+				margin-top 20px
+
+				img
+					width 48px
+					height 48px
+
+					border-radius 50px
+					object-fit cover
+
+					background-image url('/static/images/avatar-placeholder.png')
+
+				figcaption
+					font-weight 700
+					font-size 12px
+					line-height 16px
+					text-transform uppercase
+					color secondaryColor
+
+	& > ol
+		display flex
+		flex-direction column
+		gap 10px
+
+		padding 0 20px
+		margin-bottom 60px
+		@media({min} sm)
+			margin-bottom 48px
+		@media({min} md)
+			margin-bottom 60px
+		@media({min} xl)
+			margin-bottom 30px
+		@media({min} xxl)
+			padding 0 90px
+			margin-bottom 60px
+
+		li
+			display flex
+			flex-direction row-reverse
+			justify-content flex-end
+			gap 10px
+
+			font-weight 300
+
+			margin-top 8px
+			span
+				display flex
+				align-items center
+				justify-content center
+				flex-shrink 0
+
+				width 48px
+				height 48px
+
+				margin-top -8px
+
+				border-radius 50px
+				background-color #BAC0B7
+
+				font-family 'Roboto'
+				font-weight 400
+				font-size 22px
+				line-height 36px
+				color thirdColor
+
+	& > ul,ol
+		& > li
+			font-family 'Roboto'
+			font-size 16px
+			line-height 26px
+			font-weight 300
+			color mainFont
+			@media({min} sm)
+				font-size 18px
+				line-height 28px
+			@media({min} md)
+				font-size 20px
+				line-height 32px
+
+	& > h2
+		font-family 'Roboto'
+		font-size 32px
+		line-height 36px
+		font-weight 700
+		text-align center
+
+		margin-bottom 20px
+		padding 0 20px
+		@media({min} xl)
+			font-size 36px
+			line-height 36px
+
+	& > h3
+		margin-bottom 20px
+		padding 0 20px
+		font-family 'Roboto'
+		font-weight 700
+		font-size 28px
+		line-height 36px
+		color secondaryColor
+		@media({min} xxl)
+			font-size 32px
+			padding 0 90px
+
+
+	& > p+ul
+		margin-top -20px
+
+	& > ul
+		display flex
+		flex-direction column
+		gap 15px
+
+		padding 0 20px 0 60px
+		margin-bottom 40px
+		@media({min} xxl)
+			gap 20px
+
+			padding 0 90px 0 130px
+
+		li
+			padding-left 20px
+			list-style-type disc
+			list-style-position outside
+			&::marker
+				color #BAC0B7
+
+
+
+	& > figure
+		padding 20px 0 40px
+		margin 0 0 30px
+
+		background-color #F7F7F7
+		border-radius 10px
+		@media({min} sm)
+			padding 20px 20px 40px
+			margin 0 0 40px
+		@media({min} xxl)
+			padding 20px 90px 40px
+		& > div
+			position relative
+
+			// height auto
+			// max-height calc(100vh - 100px)
+			// @media({min} sm)
+			// 	min-height 487px
+			// @media({min} md)
+			// 	min-height 411px
+			// @media({min} xl)
+			// 	min-height 520px
+
+			& > button
+				position absolute
+				top 10px
+				right 10px
+
+				width 48px
+				height 48px
+
+				border none
+				background-color transparent
+			& > img
+				height auto
+				object-fit contain
+				margin 0 auto
+				cursor url('/static/images/cursor.svg') 4 12,auto
+				max-height calc(100vh - 100px)
+				@media({min} sm)
+					min-height 487px
+				@media({min} md)
+					min-height 411px
+				@media({min} xl)
+					min-height 520px
+		figcaption
+			text-align center
+			font-weight 400
+			font-size 12px
+			line-height 16px
+			color #90978D
+
+			margin-top 10px
+			padding 0 20px
+			@media({min} sm)
+				margin-top 20px
+			@media({min} md)
+				padding 0 80px
+			span
+				display block
+				font-weight 700
+				text-transform uppercase
+				@media({min} xxl)
+					display inline
+
+		&.active
+			position fixed
+			top 0
+			left 0
+			z-index 11
+
+			width 100vw
+			height 100vh
+
+			background-color rgb(0,0,0,.9)
+			cursor default
+			img
+				cursor default
+			& > div
+				position static
+
+				max-width 74%
+				height 90%
+
+				margin 0 auto
+
+				border-radius 0
+				background none
+				& > button
+					top 20px
+					right 20px
+
+					border-radius 50%
+					background-color secondaryBg
+					&:after,&:before
+						position absolute
+
+						content ''
+						width 16px
+						height 2px
+
+						top 50%
+						left calc(50% - 8px)
+						transform translate(-50%, -50%)
+						transform-origin center center
+
+						background-color #333333
+					&:after
+						transform rotate(-45deg)
+					&:before
+						transform rotate(45deg)
+
+					svg
+						display none
+
+			&.scale
+				& > div
+					overflow hidden
+					background none
+				img
+					transform translate(0,0) scale(3)
+					cursor grab
+
+			.controls
+				position absolute
+				top 20px
+				right 88px
+
+				display flex
+
+				button
+					display flex
+					justify-content center
+					align-items center
+
+					width 48px
+					height 48px
+
+					border 1px solid rgba(255,255,255,.4)
+					border-radius 2px
+					background-color transparent
+
+					color white
+					font-weight 400
+					font-size 24px
+
+	& > picture
+		padding 20px
+		margin-bottom 30px
+
+		background-color #F7F7F7
+		border-radius 10px
+		@media({min} md)
+			margin 0 20px 40px
+
+		@media({min} xxl)
+			margin 0 90px 40px
+		img
+			margin 0 auto
+
+	&__video
+		background #F7F7F7
+		border-radius 10px
+		overflow hidden
+		padding 20px
+		margin 0 0 60px
+		@media({min} md)
+			margin 0 20px 60px
+		@media({min} xxl)
+			margin 0 90px 60px
+		video
+			max-width 100%
+			margin 0 auto
+
+	.content__accent
+		position relative
+
+		background #F7F7F7
+		border-radius 10px
+		overflow hidden
+
+		padding 60px 20px 60px 40px
+
+		font-family 'Roboto'
+		font-weight 700
+		font-size 20px
+		line-height 32px
+		&:before
+			position absolute
+			top 0
+			left 0
+
+			height 100%
+			width 10px
+
+			content ''
+			background-color #BAC0B7
+		@media({min} sm)
+			padding 60px 20px 60px 80px
+		@media({min} sm)
+			padding 60px 90px
+
+
+	.read-material
+		margin-bottom 30px
+		@media({min} sm)
+			margin-bottom 40px
+
+	& > table
+		position relative
+		display block
+
+		border-collapse collapse
+		overflow-x auto
+
+		margin-bottom 40px
+		@media({min} sm)
+			margin 0 20px 40px
+		caption
+			font-family 'Roboto'
+			font-weight 400
+			font-size 24px
+			line-height 32px
+			color secondaryColor
+
+			margin-bottom 30px
+			padding 0 20px
+			@media({min} sm)
+				margin-bottom 20px
+		thead
+			th
+				padding 20px 20px 30px
+
+				text-align left
+
+				background-color #F7F7F7
+				font-weight 700
+				font-size 18px
+				line-height 36px
+				text-transform uppercase
+				&:first-child
+					position -webkit-sticky
+					position sticky
+					left 0
+					z-index 1
+
+					border-top-left-radius 10px
+					&:after
+						position absolute
+						top 0
+						right -1px
+
+						content ''
+						height 100%
+						width 1px
+						background-color #DDDDDD
+				&:last-child
+					border-top-right-radius 10px
+				&:not(:last-child)
+					border-right 1px solid #DDDDDD
+		tbody
+			td
+				position relative
+				width 33%
+				min-width 195px
+
+				padding 20px 20px 40px
+
+				border 1px solid #DDDDDD
+
+				font-size 16px
+				line-height 24px
+				font-weight 400
+				vertical-align top
+				&:first-child
+
+
+					position -webkit-sticky
+					position sticky
+					left 0
+					z-index 1
+
+					background-color #fff
+					&:after
+						position absolute
+						top 0
+						right -1px
+
+						content ''
+						height 100%
+						width 1px
+						background-color #DDD
+					@media({min} sm)
+						font-weight 700
+						font-size 18px
+						line-height 22px
+
+		@media({max} sm - 1)
+			overflow hidden
+			span
+				display block
+
+				text-transform uppercase
+				font-weight 700
+				font-size 18px
+				line-height 22px
+
+				margin-bottom 10px
+
+
+	.content__dialog-list
+		gap 10px
+		padding 0 10px
+		margin-top 0
+		@media({min} sm)
+			padding 0 20px
+		@media({min} xxl)
+			padding 0 90px
+		.content__dialog-item
+			position relative
+
+			border-radius 10px
+			border 1px solid #DDD
+			list-style-type none
+
+			padding 78px 20px 60px
+
+			font-family 'Roboto'
+			font-size 18px
+			line-height 28px
+			&:before
+				position absolute
+				top 20px
+				left 20px
+
+				height 48px
+				width 48px
+
+				border-radius 50px
+				background-color #90978D
+
+				display flex
+				justify-content center
+				align-items center
+
+				font-family 'Roboto'
+				font-weight 700
+				font-size 26px
+				line-height 34px
+				color white
+			@media({min} sm)
+				padding 25px 40px 30px 99px
+				&:before
+					left 40px
+			@media({min} xxl)
+				font-size 20px
+				line-height 32px
+
+			&:nth-child(odd)
+				font-weight 700
+				&:before
+					content url("data:image/svg+xml; utf8, <svg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M14.908 0C13.9931 0 13.2515 0.741615 13.2515 1.65644V3.38777C10.6852 3.64675 8.61813 4.57739 7.05039 6.17971C5.41356 7.85265 4.49311 10.0541 4.28904 12.784H1.65644C0.741614 12.784 0 13.5256 0 14.4405C0 15.3553 0.741613 16.0969 1.65644 16.0969H4.38936C4.71699 18.3857 5.604 20.2728 7.05039 21.7582C8.61813 23.3682 10.6852 24.3033 13.2515 24.5635V27.4159C13.2515 28.3307 13.9931 29.0724 14.908 29.0724C15.8228 29.0724 16.5644 28.3307 16.5644 27.4159V24.5384C19.0314 24.2469 21.0254 23.3202 22.5464 21.7582C23.9928 20.2728 24.8798 18.3857 25.2074 16.0969H28.3436C29.2584 16.0969 30 15.3553 30 14.4405C30 13.5256 29.2584 12.784 28.3436 12.784H25.3075C25.1024 10.0541 24.1775 7.85265 22.5326 6.17971C21.006 4.62704 19.0166 3.70507 16.5644 3.41378V1.65644C16.5644 0.741614 15.8228 0 14.908 0ZM12.8374 13.6656C12.8374 12.5221 13.7644 11.5951 14.908 11.5951C16.0515 11.5951 16.9785 12.5221 16.9785 13.6656C16.9785 14.8092 16.0515 15.7362 14.908 15.7362C13.7644 15.7362 12.8374 14.8092 12.8374 13.6656ZM18.3527 19.1664C18.866 18.543 19.2464 17.8074 19.4939 16.9595C19.7414 16.1116 19.8652 15.1148 19.8652 13.9689C19.8652 12.7406 19.7231 11.6957 19.4389 10.834C19.1548 9.97235 18.7835 9.2757 18.3252 8.74404C17.8577 8.19405 17.3192 7.79531 16.7096 7.54781C16.1 7.30031 15.4652 7.17657 14.8053 7.17657C14.1361 7.17657 13.5059 7.29573 12.9147 7.53406C12.3234 7.77239 11.7803 8.16655 11.2853 8.71654C10.827 9.22987 10.4535 9.93797 10.1647 10.8409C9.87597 11.7438 9.7316 12.791 9.7316 13.9827C9.7316 15.2018 9.87138 16.2399 10.151 17.097C10.4305 17.9541 10.7995 18.653 11.2578 19.1939C11.7161 19.7347 12.2524 20.1334 12.8665 20.3901C13.4807 20.6467 14.1269 20.7751 14.8053 20.7751C15.4836 20.7751 16.1298 20.6445 16.744 20.3832C17.3581 20.122 17.8944 19.7164 18.3527 19.1664Z' fill='white'/></svg>")
+					padding-top 7px
+			&:nth-child(even)
+				font-weight 300
+				&:before
+					content 'И'
+
+	&__reportage
+		margin-bottom 40px
+
+		&-body
+			background #F7F7F7
+			border-radius 10px
+			overflow hidden
+
+			margin 5px 0 20px
+			h3
+				color white
+			@media({min} sm)
+				padding 20px
+			@media({min} xxl)
+				padding 20px 90px 30px
+
+		&-footer
+			display grid
+			grid-template-columns 1fr
+			align-items center
+			gap 20px
+
+			padding 10px 10px 20px
+
+			background rgba(0, 0, 0, 0.9)
+			@media({min} sm)
+				padding 20px
+				grid-template-columns 1fr 250px
+			@media({min} md)
+				grid-template-columns 1fr 150px
+			@media({min} xl)
+				grid-template-columns 1fr 280px
+
+		&-imgs
+			display flex
+			gap 10px
+			img
+				width 107px
+				height 80px
+				object-fit cover
+			&_last
+				position relative
+				&:before
+					position absolute
+					content ''
+					width 100%
+					height 100%
+					background: rgba(0, 0, 0, 0.5)
+				span
+					position absolute
+					top 50%
+					left 50%
+					transform translate(-50%, -50%)
+
+					font-size 30px
+					line-height 41px
+					font-weight 700
+					color white
+		&:hover
+			.button-icon__icon
+				background-color primaryAccentColor
+	&__ad-footer
+		padding 0 20px
+		@media({min} sm)
+			padding 0
+		.text-line
+			padding 0
