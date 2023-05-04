@@ -7,8 +7,8 @@ export default defineComponent({
 </script>
 
 <template>
+	<BaseRing></BaseRing>
 	<BaseHeader></BaseHeader>
-		<h2>layout</h2>
 		<slot />
 	<BaseFooter></BaseFooter>
 </template>

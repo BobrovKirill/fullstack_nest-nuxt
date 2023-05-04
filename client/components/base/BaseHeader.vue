@@ -31,6 +31,7 @@
                 <div class="header__social social-sharing"></div>
                 <button class="header__burger" aria-label="Открыть меню"><span></span></button>
             </div>
+            <BaseNav></BaseNav>
         </div>
     </header>
 </template>
@@ -39,7 +40,7 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-	name: "header"
+	name: "base-header"
 })
 </script>
 
