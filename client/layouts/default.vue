@@ -9,7 +9,9 @@ export default defineComponent({
 <template>
 	<BaseRing></BaseRing>
 	<BaseHeader></BaseHeader>
+	<main id="main">
 		<slot />
+	</main>
 	<BaseFooter></BaseFooter>
 </template>
 
