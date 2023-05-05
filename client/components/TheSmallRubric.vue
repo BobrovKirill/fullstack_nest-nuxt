@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: "IndexMost_read"
+    name: "TheSmallRubric"
 }
 </script>
 

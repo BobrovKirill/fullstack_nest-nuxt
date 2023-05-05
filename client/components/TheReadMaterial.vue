@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: "IndexNew_comments"
+    name: "TheReadMaterial"
 }
 </script>
 

@@ -2,12 +2,17 @@
     <section class="news"><h2 class="news__title container">новое</h2>
         <div class="news__body container">
             <article class="news__content">
-                <div class="news__content-link"><a
-                        href="/menslife/maletoys/news/2023/05/04/663557-bez-shuma-i-pyili-glushiteli-chto-myi-o-nih-znaem-chast-1.html"
-                        class="news__content-img cursor"><img
-                        src="https://www.ohotniki.ru/upload/entities/2023/05/04/13/articles/detailPicture/ad/3d/b6/ad/3def24031e1619aa2f500a76dc5d2381.jpg"
-                        alt="Изображение Без шума и пыли. Глушители — что мы о них знаем? Часть 1"></a></div>
+                <div class="news__content-link">
+                    <a
+                        :href="generalNews.link"
+                        class="news__content-img cursor">
+                    <img v-if="generalNews.imgUrl"
+                        :src="generalNews.imgUrl"
+                        :alt="'Изображение ' + generalNews.title">
+                    </a>
+                </div>
                 <div class="news__content-header">
+                    <TheMeta :meta-data="generalNews.metaData"></TheMeta>
                     <div class="meta dark">
                         <div class="meta__date">
                             <time datetime="2022-05-26">4 мая 2023&nbsp;—&nbsp;</time>
@@ -20,13 +25,12 @@
                         <hr class="meta__hr">
                     </div>
                 </div>
-                <a href="/menslife/maletoys/news/2023/05/04/663557-bez-shuma-i-pyili-glushiteli-chto-myi-o-nih-znaem-chast-1.html"
-                   class="cursor"><h3 class="news__content-title">Без шума и пыли. Глушители — что мы о них знаем?
-                    Часть 1</h3>
-                    <p class="news__content-text">Что вы знаете о глушителях? Нет, не тех, что висят под брюхом авто
-                        и делают нашу жизнь спокойнее и тише. Речь пойдет о глушителях, которые навинчиваются на
-                        ствол оружия. И которые у основной массы людей ассоциируются с волшебным прибором, убирающим
-                        полностью звук практически любого выстрела</p></a></article>
+                <a :href="generalNews.link"
+                   class="cursor">
+                    <h3 class="news__content-title">{{generalNews.title}}</h3>
+                    <p class="news__content-text">{{generalNews.text}}</p>
+                </a>
+            </article>
             <div class="news__good good"></div>
             <ul class="news__listing">
                 <li class="listing-item">
@@ -130,7 +134,17 @@
 
 <script>
 export default {
-    name: "news"
+    name: "news",
+    props: {
+        newsData: Object
+    },
+    data(){
+        return {
+            generalNews: this.newsData.generalNews,
+            newsList: this.newsData.newsList,
+            button: this.newsData.button
+        }
+    }
 }
 </script>
 
