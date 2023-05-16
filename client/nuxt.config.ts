@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import path from "path";
+import path from 'path';
+import eslint from 'vite-plugin-eslint';
 
 export default defineNuxtConfig({
 	app: {
@@ -7,14 +8,14 @@ export default defineNuxtConfig({
 			charset: 'utf-16',
 			viewport: 'width=500, initial-scale=1',
 			htmlAttrs: {
-				lang: 'ru'
+				lang: 'ru',
 			},
 			title: 'title',
 			meta: [
-				{charset: 'utf-8'},
-				{name: 'viewport', content: 'width=device-width, initial-scale=1'},
+				{ charset: 'utf-8' },
+				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 				// <meta name="description" content="My amazing site">
-				{name: 'description', content: 'My amazing site.'}
+				{ name: 'description', content: 'My amazing site.' },
 			],
 			script: [],
 			link: [],
@@ -22,10 +23,7 @@ export default defineNuxtConfig({
 			noscript: [],
 		},
 	},
-	buildModules: [
-		'@nuxtjs/style-resources',
-		'@pinia/nuxt',
-	],
+	buildModules: ['@nuxtjs/style-resources', '@pinia/nuxt'],
 	// css: [{ src: '~/assets/styles/reset.styl', lang: 'styl'}], <- Использовать для подгрузки критического css
 	imports: {
 		// autoImport: false
@@ -34,9 +32,10 @@ export default defineNuxtConfig({
 		css: {
 			preprocessorOptions: {
 				stylus: {
-					imports: [path.resolve(__dirname, './assets/styles/styl.styl')]
-				}
-			}
-		}
-	}
-})
+					imports: [path.resolve(__dirname, './assets/styles/styl.styl')],
+				},
+			},
+		},
+		plugins: [eslint()],
+	},
+});

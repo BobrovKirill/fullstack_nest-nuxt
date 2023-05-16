@@ -1,9 +1,9 @@
 <script lang="ts">
-import {defineComponent} from 'vue'
+import { defineComponent } from 'vue';
 
 export default defineComponent({
- name: "default"
-})
+	name: 'TheDefault',
+});
 </script>
 
 <template>
@@ -15,5 +15,4 @@ export default defineComponent({
 	<BaseFooter></BaseFooter>
 </template>
 
-<style lang="stylus">
-</style>
+<style lang="stylus"></style>

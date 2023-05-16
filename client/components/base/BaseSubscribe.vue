@@ -1,19 +1,25 @@
 <template>
-    <div class="subscribe"><a href="#" class="subscribe__container">
-        <picture class="subscribe__logo">
-            <source srcset="~/assets/images/subscribe-logo.webp">
-            <img src="~/assets/images/subscribe-logo.png"
-                 alt="Логотип «Российская охотничья газета» и журнал «Охота и рыбалка XXI век»"></picture>
-        <h2 class="subscribe__title">Читайте «Российскую охотничью газету»<br> и&nbsp;журнал «Охота и&nbsp;рыбалка XXI&nbsp;век»
-        </h2>
-        <button class="light button" type="button">Подписаться</button>
-    </a></div>
+	<div class="subscribe">
+		<a href="#" class="subscribe__container">
+			<picture class="subscribe__logo">
+				<source srcset="~/assets/images/subscribe-logo.webp" />
+				<img
+					src="~/assets/images/subscribe-logo.png"
+					alt="Логотип «Российская охотничья газета» и журнал «Охота и рыбалка XXI век»"
+			/></picture>
+			<h2 class="subscribe__title">
+				Читайте «Российскую охотничью газету»<br />
+				и&nbsp;журнал «Охота и&nbsp;рыбалка XXI&nbsp;век»
+			</h2>
+			<button class="light button" type="button">Подписаться</button>
+		</a>
+	</div>
 </template>
 
 <script>
 export default {
-    name: "BaseSubscribe"
-}
+	name: 'BaseSubscribe',
+};
 </script>
 
 <style lang="stylus">

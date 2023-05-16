@@ -1,15 +1,11 @@
 <template>
-    <div class="most-read">
-
-    </div>
+	<div class="most-read"></div>
 </template>
 
 <script>
 export default {
-    name: "IndexMost_read"
-}
+	name: 'IndexMostRead',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

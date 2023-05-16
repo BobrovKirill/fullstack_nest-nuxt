@@ -1,15 +1,13 @@
 <script lang="ts">
-import {defineComponent} from 'vue'
+import { defineComponent } from 'vue';
 
 export default defineComponent({
- name: "base-nav"
-})
+	name: 'BaseNav',
+});
 </script>
 
 <template>
-    <nav v-if="false">
-        fdsfdsf
-    </nav>
+	<nav v-if="false">fdsfdsf</nav>
 </template>
 
 <style lang="stylus">
@@ -339,5 +337,4 @@ export default defineComponent({
 			padding 7px 0 60px 20px
 		@media ({min}: lg)
 			padding 7px 20px 60px
-
 </style>

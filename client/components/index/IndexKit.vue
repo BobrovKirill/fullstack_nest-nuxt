@@ -1,15 +1,11 @@
 <template>
-    <div class="kit">
-
-    </div>
+	<div class="kit"></div>
 </template>
 
 <script>
 export default {
-    name: "IndexKit"
-}
+	name: 'IndexKit',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

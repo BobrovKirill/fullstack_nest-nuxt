@@ -1,151 +1,110 @@
 <template>
-    <section class="news"><h2 class="news__title container">новое</h2>
-        <div class="news__body container">
-            <article class="news__content">
-                <div class="news__content-link">
-                    <a
-                        :href="generalNews.link"
-                        class="news__content-img cursor">
-                    <img v-if="generalNews.imgUrl"
-                        :src="generalNews.imgUrl"
-                        :alt="'Изображение ' + generalNews.title">
-                    </a>
-                </div>
-                <div class="news__content-header">
-                    <TheMeta :meta-data="generalNews.metaData"></TheMeta>
-                    <div class="meta dark">
-                        <div class="meta__date">
-                            <time datetime="2022-05-26">4 мая 2023&nbsp;—&nbsp;</time>
-                            <a href="/menslife/" rel="noopener">Мужская среда</a></div>
-                        <div class="meta__rubric"><span>статья</span>
-                            <svg width="32" height="32">
-                                <use xlink:href="#icon-rubric_wright"></use>
-                            </svg>
-                        </div>
-                        <hr class="meta__hr">
-                    </div>
-                </div>
-                <a :href="generalNews.link"
-                   class="cursor">
-                    <h3 class="news__content-title">{{generalNews.title}}</h3>
-                    <p class="news__content-text">{{generalNews.text}}</p>
-                </a>
-            </article>
-            <div class="news__good good"></div>
-            <ul class="news__listing">
-                <li class="listing-item">
-                    <div class="meta dark">
-                        <div class="meta__date">
-                            <time datetime="2022-05-26">4 мая 2023&nbsp;—&nbsp;</time>
-                            <a href="/news/" rel="noopener">Новости</a></div>
-                        <div class="meta__rubric"><span>новость</span>
-                            <svg width="32" height="32">
-                                <use xlink:href="#icon-rubric_wright"></use>
-                            </svg>
-                        </div>
-                        <hr class="meta__hr">
-                    </div>
-                    <a href="/hunting/news/2023/05/04/663564-kogda-garri-vstretil-salli-dva-mopsa-nedelyami-poedali-trup-hozyaina.html"
-                       class="cursor"><h4 class="listing-item__title cursor">«Когда Гарри встретил Салли»: два мопса
-                        неделями поедали труп хозяина</h4></a></li>
-                <li class="listing-item">
-                    <div class="meta dark">
-                        <div class="meta__date">
-                            <time datetime="2022-05-26">4 мая 2023&nbsp;—&nbsp;</time>
-                            <a href="/news/" rel="noopener">Новости</a></div>
-                        <div class="meta__rubric"><span>новость</span>
-                            <svg width="32" height="32">
-                                <use xlink:href="#icon-rubric_wright"></use>
-                            </svg>
-                        </div>
-                        <hr class="meta__hr">
-                    </div>
-                    <a href="/hunting/news/2023/05/04/663563-opasnaya-infektsiya-v-yugre-u-severnogo-olenya-vyiyavlen-brutsellez.html"
-                       class="cursor"><h4 class="listing-item__title cursor">Опасная инфекция в Югре: у северного
-                        оленя выявлен бруцеллез</h4></a></li>
-                <li class="listing-item">
-                    <div class="meta dark">
-                        <div class="meta__date">
-                            <time datetime="2022-05-26">4 мая 2023&nbsp;—&nbsp;</time>
-                            <a href="/news/" rel="noopener">Новости</a></div>
-                        <div class="meta__rubric"><span>новость</span>
-                            <svg width="32" height="32">
-                                <use xlink:href="#icon-rubric_wright"></use>
-                            </svg>
-                        </div>
-                        <hr class="meta__hr">
-                    </div>
-                    <a href="/hunting/news/2023/05/04/663562-lipovyiy-zveroboy-pod-bryanskom-inspektsiya-ostanovila-uazbobrovoz.html"
-                       class="cursor"><h4 class="listing-item__title cursor">Липовый зверобой: под Брянском
-                        инспекция остановила «УАЗ-бобровоз»</h4></a></li>
-                <li class="listing-item">
-                    <div class="meta dark">
-                        <div class="meta__date">
-                            <time datetime="2022-05-26">4 мая 2023&nbsp;—&nbsp;</time>
-                            <a href="/news/" rel="noopener">Новости</a></div>
-                        <div class="meta__rubric"><span>новость</span>
-                            <svg width="32" height="32">
-                                <use xlink:href="#icon-rubric_wright"></use>
-                            </svg>
-                        </div>
-                        <hr class="meta__hr">
-                    </div>
-                    <a href="/hunting/news/2023/05/04/663561-dikiy-ohotnik-v-habarovskih-lesah-sobaku-izreshetili-drobyu.html"
-                       class="cursor"><h4 class="listing-item__title cursor">Дикий охотник: в хабаровских лесах
-                        собаку изрешетили дробью</h4></a></li>
-                <li class="listing-item">
-                    <div class="meta dark">
-                        <div class="meta__date">
-                            <time datetime="2022-05-26">4 мая 2023&nbsp;—&nbsp;</time>
-                            <a href="/news/" rel="noopener">Новости</a></div>
-                        <div class="meta__rubric"><span>новость</span>
-                            <svg width="32" height="32">
-                                <use xlink:href="#icon-rubric_wright"></use>
-                            </svg>
-                        </div>
-                        <hr class="meta__hr">
-                    </div>
-                    <a href="/hunting/news/2023/05/04/663560-ryazanskiy-myasnik-ubil-kosulyu-na-glazah-u-detey.html"
-                       class="cursor"><h4 class="listing-item__title cursor">Рязанский мясник убил косулю на глазах
-                        у детей</h4></a></li>
-                <li class="listing-item">
-                    <div class="meta dark">
-                        <div class="meta__date">
-                            <time datetime="2022-05-26">4 мая 2023&nbsp;—&nbsp;</time>
-                            <a href="/news/" rel="noopener">Новости</a></div>
-                        <div class="meta__rubric"><span>новость</span>
-                            <svg width="32" height="32">
-                                <use xlink:href="#icon-rubric_wright"></use>
-                            </svg>
-                        </div>
-                        <hr class="meta__hr">
-                    </div>
-                    <a href="/hunting/news/2023/05/04/663559-shodili-na-kabana-v-slovakii-ohotniki-spasalis-strelboy-ot-medvedya.html"
-                       class="cursor"><h4 class="listing-item__title cursor">Сходили на кабана: в Словакии охотники
-                        спасались стрельбой от медведя</h4></a></li>
-            </ul>
-            <a class="light button-icon" href="/news/">все новости
-                <svg width="24" height="24" class="button-icon__icon">
-                    <use xlink:href="#icon-arrow_small"></use>
-                </svg>
-            </a></div>
-    </section>
+	<section class="news">
+		<h2 class="news__title container">новое</h2>
+		<div class="news__body container">
+			<article class="news__content">
+				<div class="news__content-link">
+					<a :href="newsData.generalNews.link" class="news__content-img cursor">
+						<img
+							v-if="newsData.generalNews.imgUrl"
+							:src="newsData.generalNews.imgUrl"
+							:alt="'Изображение ' + newsData.generalNews.title"
+						/>
+					</a>
+				</div>
+				<div class="news__content-header">
+					<TheMeta :meta-data="generalNews.metaData"></TheMeta>
+					<div class="meta dark">
+						<div class="meta__date">
+							<time datetime="2022-05-26">4 мая 2023&nbsp;—&nbsp;</time>
+							<a href="/menslife/" rel="noopener">Мужская среда</a>
+						</div>
+						<div class="meta__rubric">
+							<span>статья</span>
+							<svg width="32" height="32">
+								<use xlink:href="#icon-rubric_wright"></use>
+							</svg>
+						</div>
+						<hr class="meta__hr" />
+					</div>
+				</div>
+				<a :href="newsData.generalNews.link" class="cursor">
+					<h3 class="news__content-title">{{ newsData.generalNews.title }}</h3>
+					<p class="news__content-text">{{ newsData.generalNews.text }}</p>
+				</a>
+			</article>
+			<div class="news__good good"></div>
+			<ul class="news__listing"></ul>
+			<a class="light button-icon" href="/news/"
+				>все новости
+				<svg width="24" height="24" class="button-icon__icon">
+					<use xlink:href="#icon-arrow_small"></use>
+				</svg>
+			</a>
+		</div>
+	</section>
 </template>
 
 <script>
 export default {
-    name: "news",
-    props: {
-        newsData: Object
-    },
-    data(){
-        return {
-            generalNews: this.newsData.generalNews,
-            newsList: this.newsData.newsList,
-            button: this.newsData.button
-        }
-    }
-}
+	name: 'IndexNews',
+	props: {
+		newsData: {
+			type: Object,
+			generalNews: {
+				type: Object,
+				required: true,
+			},
+			newsList: {
+				type: Object,
+				required: true,
+			},
+			button: {
+				type: Object,
+				required: true,
+			},
+		},
+	},
+	data() {
+		return {
+			test: 'news-foto',
+			generalNews: this.newsData,
+			// newsList: this.newsData.newsList,
+			// button: this.newsData.button
+		};
+	},
+
+	mounted() {
+		console.log('kek', this.newsData.generalNews);
+	},
+	created() {
+		console.log('created()', this.newsData.generalNews);
+	},
+	beforeCreate() {
+		console.log('beforeCreate()', this.newsData.generalNews);
+	},
+	beforeMount() {
+		console.log('beforeMount()', this.newsData.generalNews);
+	},
+	beforeUpdate() {
+		console.log('beforeUpdate()', this.newsData.generalNews);
+	},
+	updated() {
+		console.log('updated()', this.newsData.generalNews);
+	},
+	beforeUnmount() {
+		console.log('beforeUnmount()', this.newsData.generalNews);
+	},
+	unmounted() {
+		console.log('unmounted()', this.newsData.generalNews);
+	},
+	methods: {
+		imgUrl(filename) {
+			return new URL(`~/assets/dev/images/${filename}.png`, import.meta.url)
+				.href;
+		},
+	},
+};
 </script>
 
 <style lang="stylus">

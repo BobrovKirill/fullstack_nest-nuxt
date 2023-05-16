@@ -1,15 +1,11 @@
 <template>
-    <div class="transport">
-
-    </div>
+	<div class="transport"></div>
 </template>
 
 <script>
 export default {
-    name: "IndexTransport"
-}
+	name: 'IndexTransport',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <h1>about page</h1>
-  </div>
+	<div>
+		<h1>about page</h1>
+	</div>
 </template>
 
 <script>
 export default {
-    name: "about.vue"
-}
+	name: 'RubricListing',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

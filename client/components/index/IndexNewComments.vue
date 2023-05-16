@@ -1,15 +1,11 @@
 <template>
-    <div class="new-comments">
-
-    </div>
+	<div class="new-comments"></div>
 </template>
 
 <script>
 export default {
-    name: "IndexNew_comments"
-}
+	name: 'IndexNewComments',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

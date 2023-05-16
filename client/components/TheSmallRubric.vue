@@ -1,13 +1,11 @@
 <template>
-
+	<h1>test</h1>
 </template>
 
 <script>
 export default {
-    name: "TheSmallRubric"
-}
+	name: 'TheSmallRubric',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

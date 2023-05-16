@@ -1,73 +1,117 @@
 <template>
-    <aside class="ring" style="transform: translate(0px, 0px);">
-        <a href="#main" class="ring__skiplink">Перейти к
-            основному контенту</a>
-        <div class="ring__scroll">
-            <nav aria-label="Сайты сателиты" class="ring__projects"><a href="https://www.mk.ru" target="_blank"
-                                                                       rel="noopener" class="ring__item">
-                <svg width="24" height="24" class="ring__item-icon">
-                    <use xlink:href="#icon-mk"></use>
-                </svg>
-                <span class="ring__item-name">МК</span></a><a href="https://avtovzglyad.ru" target="_blank"
-                                                              rel="noopener" class="ring__item">
-                <svg width="24" height="24" class="ring__item-icon">
-                    <use xlink:href="#icon-av"></use>
-                </svg>
-                <span class="ring__item-name">АвтоВзгляд</span></a><a href="https://ohotniki.ru" target="_blank"
-                                                                      rel="noopener"
-                                                                      class="ring__item ring__item_active">
-                <svg width="24" height="24" class="ring__item-icon">
-                    <use xlink:href="#icon-oh"></use>
-                </svg>
-                <span class="ring__item-name">Охотники.ру</span></a><a href="https://womanhit.ru" target="_blank"
-                                                                       rel="noopener" class="ring__item">
-                <svg width="24" height="24" class="ring__item-icon">
-                    <use xlink:href="#icon-wh"></use>
-                </svg>
-                <span class="ring__item-name">WomanHit.ru</span></a><a href="https://www.mk.ru/promokodi/"
-                                                                       target="_blank" rel="noopener"
-                                                                       class="ring__item">
-                <svg width="24" height="24" class="ring__item-icon">
-                    <use xlink:href="#icon-promo"></use>
-                </svg>
-                <span class="ring__item-name">Промокоды</span></a></nav>
-            <div class="ring__right">
-                <div class="ring__right-search">
-                    <form role="search" action="/search/" class="ring-search"><input type="search" name="q"
-                                                                                     aria-labelledby="tabpanel-label"
-                                                                                     id="header-search"
-                                                                                     placeholder="Поиск" value=""
-                                                                                     aria-label="Поиск"
-                                                                                     required="required"
-                                                                                     class="ring-search__input"><label
-                            for="header-search" class="ring-search__label">
-                        <svg width="32" height="32" class="ring-search__label-icon ring-search-icon">
-                            <use xlink:href="#icon-search"></use>
-                        </svg>
-                    </label>
-                        <button aria-label="Искать" type="submit" class="ring-search__button">
-                            <svg width="32" height="32" class="ring-search__icon">
-                                <use xlink:href="#icon-search"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-                <button aria-label="Зайти в личный кабинет" data-authorized="auth" class="ring__right-btn">Войти
-                </button>
-                <div class="ring__right-age">
-                    <svg width="34" height="37" class="ring__age-icon">
-                        <use xlink:href="#icon-16"></use>
-                    </svg>
-                </div>
-                <span class="visually-hidden">Предназначено для лиц старше шестнадцати лет</span></div>
-        </div>
-    </aside>
+	<aside class="ring" style="transform: translate(0px, 0px)">
+		<a href="#main" class="ring__skiplink">Перейти к основному контенту</a>
+		<div class="ring__scroll">
+			<nav aria-label="Сайты сателиты" class="ring__projects">
+				<a
+					href="https://www.mk.ru"
+					target="_blank"
+					rel="noopener"
+					class="ring__item"
+				>
+					<svg width="24" height="24" class="ring__item-icon">
+						<use xlink:href="#icon-mk"></use>
+					</svg>
+					<span class="ring__item-name">МК</span></a
+				><a
+					href="https://avtovzglyad.ru"
+					target="_blank"
+					rel="noopener"
+					class="ring__item"
+				>
+					<svg width="24" height="24" class="ring__item-icon">
+						<use xlink:href="#icon-av"></use>
+					</svg>
+					<span class="ring__item-name">АвтоВзгляд</span></a
+				><a
+					href="https://ohotniki.ru"
+					target="_blank"
+					rel="noopener"
+					class="ring__item ring__item_active"
+				>
+					<svg width="24" height="24" class="ring__item-icon">
+						<use xlink:href="#icon-oh"></use>
+					</svg>
+					<span class="ring__item-name">Охотники.ру</span></a
+				><a
+					href="https://womanhit.ru"
+					target="_blank"
+					rel="noopener"
+					class="ring__item"
+				>
+					<svg width="24" height="24" class="ring__item-icon">
+						<use xlink:href="#icon-wh"></use>
+					</svg>
+					<span class="ring__item-name">WomanHit.ru</span></a
+				><a
+					href="https://www.mk.ru/promokodi/"
+					target="_blank"
+					rel="noopener"
+					class="ring__item"
+				>
+					<svg width="24" height="24" class="ring__item-icon">
+						<use xlink:href="#icon-promo"></use>
+					</svg>
+					<span class="ring__item-name">Промокоды</span></a
+				>
+			</nav>
+			<div class="ring__right">
+				<div class="ring__right-search">
+					<form role="search" action="/search/" class="ring-search">
+						<input
+							id="header-search"
+							type="search"
+							name="q"
+							aria-labelledby="tabpanel-label"
+							placeholder="Поиск"
+							value=""
+							aria-label="Поиск"
+							required="required"
+							class="ring-search__input"
+						/><label for="header-search" class="ring-search__label">
+							<svg
+								width="32"
+								height="32"
+								class="ring-search__label-icon ring-search-icon"
+							>
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</label>
+						<button
+							aria-label="Искать"
+							type="submit"
+							class="ring-search__button"
+						>
+							<svg width="32" height="32" class="ring-search__icon">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+				<button
+					aria-label="Зайти в личный кабинет"
+					data-authorized="auth"
+					class="ring__right-btn"
+				>
+					Войти
+				</button>
+				<div class="ring__right-age">
+					<svg width="34" height="37" class="ring__age-icon">
+						<use xlink:href="#icon-16"></use>
+					</svg>
+				</div>
+				<span class="visually-hidden"
+					>Предназначено для лиц старше шестнадцати лет</span
+				>
+			</div>
+		</div>
+	</aside>
 </template>
 
 <script>
 export default {
-    name: "base-ring"
-}
+	name: 'BaseRing',
+};
 </script>
 
 <style lang="stylus">
@@ -204,6 +248,4 @@ export default {
 
 			&-icon
 				fill #777777
-
-
 </style>

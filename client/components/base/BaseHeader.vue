@@ -1,47 +1,60 @@
 <template>
-    <header class="header">
-        <div class="header__wrapper"><a class="header__logo" href="/">
-            <picture>
-                <source srcset="@/assets/images/gluhar2x.webp"/>
-                <source srcset="@/assets/images/gluhar4x.webp x4"/>
-                <img
-                        src="@/assets/images/gluhar2x.png"
-                        alt="Логотип охотники — глухарь"/>
-            </picture>
-            <img
-                    src="@/assets/images/ohotniki-logo.svg" alt="Логотип охотники.ру"/>
-        </a>
-            <div class="header__links"><a class="header__link" href="/editions/rog/">
-                <picture class="header__link-img">
-                    <source srcset="@/assets/images/ru-gazeta-logo.webp"/>
-                    <img
-
-                            src="@/assets/images/ru-gazeta-logo.png" alt="Логотип российская охотничья газета"/>
-                </picture>
-                <span class="header__link-text">Российская охотничья газета</span>
-            </a><a class="header__link" href="/editions/oir/">
-                <picture class="header__link-img">
-                    <source srcset="@/assets/images/ohota-ribalka-logo.webp"/>
-                    <img
-                            src="@/assets/images/ohota-ribalka-logo.png" alt="Логотип Охота и рыбалка XXI век"/>
-                </picture>
-                <span class="header__link-text">Охота и&nbsp;рыбалка XXI&nbsp;век</span>
-            </a></div>
-            <div class="header__control">
-                <div class="header__social social-sharing"></div>
-                <button class="header__burger" aria-label="Открыть меню"><span></span></button>
-            </div>
-            <BaseNav></BaseNav>
-        </div>
-    </header>
+	<header class="header">
+		<div class="header__wrapper">
+			<a class="header__logo" href="/">
+				<picture>
+					<source srcset="@/assets/images/gluhar2x.webp" />
+					<source srcset="@/assets/images/gluhar4x.webp x4" />
+					<img
+						src="@/assets/images/gluhar2x.png"
+						alt="Логотип охотники — глухарь"
+					/>
+				</picture>
+				<img
+					src="@/assets/images/ohotniki-logo.svg"
+					alt="Логотип охотники.ру"
+				/>
+			</a>
+			<div class="header__links">
+				<a class="header__link" href="/editions/rog/">
+					<picture class="header__link-img">
+						<source srcset="@/assets/images/ru-gazeta-logo.webp" />
+						<img
+							src="@/assets/images/ru-gazeta-logo.png"
+							alt="Логотип российская охотничья газета"
+						/>
+					</picture>
+					<span class="header__link-text">Российская охотничья газета</span> </a
+				><a class="header__link" href="/editions/oir/">
+					<picture class="header__link-img">
+						<source srcset="@/assets/images/ohota-ribalka-logo.webp" />
+						<img
+							src="@/assets/images/ohota-ribalka-logo.png"
+							alt="Логотип Охота и рыбалка XXI век"
+						/>
+					</picture>
+					<span class="header__link-text"
+						>Охота и&nbsp;рыбалка XXI&nbsp;век</span
+					>
+				</a>
+			</div>
+			<div class="header__control">
+				<div class="header__social social-sharing"></div>
+				<button class="header__burger" aria-label="Открыть меню">
+					<span></span>
+				</button>
+			</div>
+			<BaseNav></BaseNav>
+		</div>
+	</header>
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue'
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-	name: "base-header"
-})
+	name: 'BaseHeader',
+});
 </script>
 
 <style lang="stylus">
@@ -213,5 +226,4 @@ export default defineComponent({
 			&::before
 				top 50%
 				transform rotate(45deg) translate(-45%, -50%)
-
 </style>
